@@ -314,50 +314,24 @@ html[dir="rtl"] .b h3 { letter-spacing: 0.02em; }
 .stage { position: relative; min-height: 420px; display: grid; place-items: center; padding: 2.2rem; overflow: hidden; background: radial-gradient(ellipse 70% 60% at 25% 15%, color-mix(in srgb, var(--c1) 34%, transparent), transparent 70%), radial-gradient(ellipse 60% 60% at 85% 90%, color-mix(in srgb, var(--c2) 26%, transparent), transparent 70%), #0c0918; }
 .stage::before { content: ""; position: absolute; inset: 0; opacity: 0.4; background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 30px 30px; -webkit-mask-image: radial-gradient(ellipse at center, #000 25%, transparent 75%); mask-image: radial-gradient(ellipse at center, #000 25%, transparent 75%); }
 .ghost { position: absolute; bottom: -0.18em; inset-inline-end: 0.15em; font-family: var(--serif); font-weight: 600; font-size: clamp(4.5rem, 12vw, 8.5rem); letter-spacing: -0.05em; line-height: 1; color: rgba(255,255,255,0.045); pointer-events: none; }
-.mock { position: relative; z-index: 1; width: 100%; max-width: 410px; border-radius: 22px; padding: 1.05rem; color: #f6f3ff; font-size: 0.74rem; background: rgba(18,14,34,0.82); border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 40px 90px -20px rgba(0,0,0,0.8), inset 0 1px 0 rgba(255,255,255,0.08); transform: perspective(1200px) rotateY(-8deg) rotateX(4deg); transition: transform 0.8s var(--ease); direction: ltr; text-align: left; }
-.case.rev .mock { transform: perspective(1200px) rotateY(8deg) rotateX(4deg); }
-.case:hover .mock { transform: perspective(1200px) rotateY(0) rotateX(0) translateY(-6px); }
-.mbar { display: flex; align-items: center; gap: 0.35rem; margin-bottom: 0.95rem; }
-.mbar i { width: 9px; height: 9px; border-radius: 50%; background: #f87171; }
-.mbar i:nth-child(2) { background: #fbbf24; } .mbar i:nth-child(3) { background: #34d399; }
-.mbar span { margin-left: auto; font-size: 0.6rem; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; text-transform: uppercase; }
-.mh { font-size: 0.6rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin: 0.2rem 0 0.5rem; }
-.needs { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.9rem; }
-.need { display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.42rem 0.65rem; border-radius: 10px; font-weight: 700; background: rgba(192,132,252,0.15); border: 1px solid rgba(192,132,252,0.32); }
-.need b { font-size: 0.56rem; padding: 0.1rem 0.35rem; border-radius: 6px; background: rgba(255,255,255,0.12); color: #f9a8d4; }
-.agents { display: flex; align-items: center; gap: 0.35rem; margin-bottom: 0.9rem; font-size: 0.62rem; color: rgba(255,255,255,0.75); flex-wrap: wrap; }
-.agent { display: inline-flex; align-items: center; gap: 0.3rem; padding: 0.3rem 0.55rem; border-radius: 999px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); }
-.agent svg { width: 12px; height: 12px; }
-.agent.live::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: #34d399; animation: ping 1.8s infinite; }
-.agents em { opacity: 0.4; font-style: normal; }
-.sol { border-radius: 15px; padding: 0.85rem 0.95rem; background: linear-gradient(135deg, rgba(192,132,252,0.24), rgba(244,114,182,0.12)); border: 1px solid rgba(244,114,182,0.42); }
-.sol-top { display: flex; justify-content: space-between; align-items: center; gap: 0.5rem; margin-bottom: 0.35rem; }
-.sol-top b { font-size: 0.84rem; }
-.rec { font-size: 0.55rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.22rem 0.5rem; border-radius: 999px; background: linear-gradient(135deg, #9333ea, #db2777); }
-.sol-row { display: flex; justify-content: space-between; align-items: baseline; }
-.price { font-family: var(--serif); font-size: 1.4rem; font-weight: 600; }
-.price small { font-family: var(--sans); font-size: 0.6rem; color: rgba(255,255,255,0.6); font-weight: 500; }
-.save { font-size: 0.66rem; font-weight: 800; color: #34d399; }
-.checks { display: flex; gap: 0.65rem; margin-top: 0.55rem; font-size: 0.58rem; color: rgba(255,255,255,0.7); flex-wrap: wrap; }
-.checks span { display: inline-flex; align-items: center; gap: 0.2rem; }
-.checks svg { width: 11px; height: 11px; color: #34d399; }
-.kpis { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-bottom: 0.8rem; }
-.kpi { padding: 0.65rem 0.75rem; border-radius: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); }
-.kpi small { display: flex; align-items: center; gap: 0.3rem; font-size: 0.58rem; color: rgba(255,255,255,0.55); font-weight: 700; }
-.kpi small svg { width: 12px; height: 12px; }
-.kpi b { display: block; font-family: var(--serif); font-size: 1.18rem; margin-top: 0.15rem; }
-.kpi em { font-style: normal; font-size: 0.56rem; color: #34d399; font-weight: 800; }
-.chart { display: flex; align-items: flex-end; gap: 0.35rem; height: 92px; padding: 0 0.15rem; margin-bottom: 0.3rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
-.chart span { flex: 1; height: var(--h); border-radius: 5px 5px 2px 2px; background: linear-gradient(180deg, #2dd4bf, rgba(45,212,191,0.2)); transform-origin: bottom; transform: scaleY(0); transition: transform 1s var(--ease); }
-.in .chart span { transform: scaleY(1); }
-.chart span:nth-child(n) { transition-delay: calc(var(--i, 0) * 70ms); }
-.chart span.fc { background: repeating-linear-gradient(180deg, rgba(56,189,248,0.55) 0 4px, rgba(56,189,248,0.15) 4px 8px); border: 1px dashed rgba(56,189,248,0.7); }
-.chart span.hot { background: linear-gradient(180deg, #f472b6, rgba(244,114,182,0.2)); }
-.legend { display: flex; justify-content: space-between; font-size: 0.55rem; color: rgba(255,255,255,0.45); margin-bottom: 0.75rem; }
-.alert { display: flex; align-items: center; gap: 0.55rem; padding: 0.6rem 0.75rem; border-radius: 12px; background: rgba(244,114,182,0.12); border: 1px solid rgba(244,114,182,0.38); }
-.alert svg { width: 15px; height: 15px; color: #f472b6; flex-shrink: 0; }
-.alert b { display: block; font-size: 0.68rem; }
-.alert small { font-size: 0.58rem; color: rgba(255,255,255,0.6); }
+.screens { position: relative; z-index: 1; display: block; width: 100%; max-width: 560px; aspect-ratio: 4 / 3.05; direction: ltr; text-decoration: none; }
+.bwin { position: absolute; border-radius: 14px; overflow: hidden; background: #f6f4f0; border: 1px solid rgba(255,255,255,0.14); box-shadow: 0 40px 90px -24px rgba(0,0,0,0.85), 0 0 0 1px rgba(0,0,0,0.25); transition: transform 0.9s var(--ease), box-shadow 0.9s var(--ease); }
+.bwin .wbar { height: 28px; display: flex; align-items: center; gap: 6px; padding: 0 11px; background: #16112a; }
+.bwin .wbar i { width: 9px; height: 9px; border-radius: 50%; background: #f87171; flex-shrink: 0; }
+.bwin .wbar i:nth-child(2) { background: #fbbf24; } .bwin .wbar i:nth-child(3) { background: #34d399; }
+.bwin .wbar span { margin: 0 auto; padding: 2px 12px; border-radius: 6px; background: rgba(255,255,255,0.07); font-size: 0.6rem; font-weight: 600; color: rgba(255,255,255,0.6); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 70%; }
+.bwin img { display: block; width: 100%; height: auto; }
+.bwin.main { left: 0; top: 0; width: 86%; transform: perspective(1600px) rotateY(-9deg) rotateX(4deg); transform-origin: left center; }
+.bwin.sub { right: 0; bottom: 0; width: 55%; transform: perspective(1600px) rotateY(-9deg) rotateX(4deg) translateZ(60px); transform-origin: left center; }
+.case.rev .bwin.main { left: auto; right: 0; transform: perspective(1600px) rotateY(9deg) rotateX(4deg); transform-origin: right center; }
+.case.rev .bwin.sub { right: auto; left: 0; transform: perspective(1600px) rotateY(9deg) rotateX(4deg) translateZ(60px); transform-origin: right center; }
+.case:hover .bwin.main { transform: perspective(1600px) rotateY(0) rotateX(0) translateY(-6px); }
+.case:hover .bwin.sub { transform: perspective(1600px) rotateY(0) rotateX(0) translate(14px, 10px); }
+.case.rev:hover .bwin.sub { transform: perspective(1600px) rotateY(0) rotateX(0) translate(-14px, 10px); }
+.open-demo { position: absolute; z-index: 3; left: 50%; bottom: 18px; transform: translate(-50%, 10px); opacity: 0; display: inline-flex; align-items: center; gap: 0.45rem; padding: 0.55rem 1rem; border-radius: 999px; font-size: 0.74rem; font-weight: 800; color: #0a0716; background: linear-gradient(120deg, var(--c1), var(--c2)); box-shadow: 0 12px 30px -10px rgba(0,0,0,0.6); transition: opacity 0.4s, transform 0.4s var(--ease); white-space: nowrap; }
+.open-demo svg { width: 14px; height: 14px; }
+.screens:hover .open-demo, .screens:focus-visible .open-demo { opacity: 1; transform: translate(-50%, 0); }
+@media (hover: none) { .open-demo { opacity: 1; transform: translate(-50%, 0); } }
 .cbody { padding: 2.5rem 2.5rem 2.3rem; display: flex; flex-direction: column; }
 @media (max-width: 560px) { .cbody { padding: 1.7rem 1.4rem; } .stage { min-height: 340px; padding: 1.3rem; } }
 .cmeta { display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 1.1rem; font-size: 0.74rem; color: var(--muted); font-weight: 600; }
@@ -523,7 +497,6 @@ body.lock { overflow: hidden; }
   .reveal { opacity: 1; transform: none; }
   .hero h1 .ch { opacity: 1; transform: none; }
   .track { animation: none !important; }
-  .chart span { transform: none; }
 }
 </style>
 </head>
@@ -638,19 +611,13 @@ body.lock { overflow: hidden; }
 
       <div class="cases">
         <article class="case spot reveal">
-          <div class="stage" aria-hidden="true">
-            <div class="ghost">TELORA</div>
-            <div class="mock">
-              <div class="mbar"><i></i><i></i><i></i><span>Design my solution</span></div>
-              <div class="mh">Your needs</div>
-              <div class="needs"><span class="need">Data <b>High</b></span><span class="need">Streaming <b>Low</b></span><span class="need">Intl Calls <b>Low</b></span></div>
-              <div class="agents"><span class="agent live"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>Search Agent</span><em>→</em><span class="agent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>Design Agent</span><em>→</em><span class="agent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>Guardrails</span></div>
-              <div class="sol">
-                <div class="sol-top"><b>Orbit Youth 15 + Intl 100</b><span class="rec">Recommended</span></div>
-                <div class="sol-row"><span class="price">128.50 <small>SAR / month</small></span><span class="save">−66.50 SAR vs current</span></div>
-                <div class="checks"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>In catalog</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>Price verified</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>Within budget</span></div>
-              </div>
-            </div>
+          <div class="stage">
+            <div class="ghost" aria-hidden="true">TELORA</div>
+            <a class="screens" href="https://layanharbi9.github.io/TELORA/" target="_blank" rel="noopener" aria-label="Open the TELORA live demo">
+              <div class="bwin main"><div class="wbar"><i></i><i></i><i></i><span>layanharbi9.github.io/TELORA</span></div><img src="assets/shots/telora-solutions.jpg" alt="TELORA: three personalized solutions with the recommended plan highlighted" width="1440" height="900" loading="lazy" decoding="async"></div>
+              <div class="bwin sub"><div class="wbar"><i></i><i></i><i></i><span>My Plan</span></div><img src="assets/shots/telora-plan.jpg" alt="TELORA: a customer's plan built from puzzle pieces" width="1440" height="900" loading="lazy" decoding="async"></div>
+              <span class="open-demo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 4 20 12 6 20 6 4"/></svg><span data-i18n="openDemo">Open live demo</span></span>
+            </a>
           </div>
           <div class="cbody">
             <div class="cmeta"><span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="8" width="16" height="12" rx="3"/><path d="M12 8V4"/></svg><span data-i18n="tlPill">Agentic AI</span></span><span data-i18n="tlMeta">2026 · SDA × WeCloudData Bootcamp</span></div>
@@ -672,19 +639,13 @@ body.lock { overflow: hidden; }
         </article>
 
         <article class="case sana rev spot reveal">
-          <div class="stage" aria-hidden="true">
-            <div class="ghost">سَنا</div>
-            <div class="mock">
-              <div class="mbar"><i></i><i></i><i></i><span>SANA dashboard</span></div>
-              <div class="kpis">
-                <div class="kpi"><small><svg viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg>Electricity</small><b>3,181 kWh</b><em>↓ 3.2% this month</em></div>
-                <div class="kpi"><small><svg viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2"><path d="M12 2.7s7 7.3 7 12.3a7 7 0 0 1-14 0c0-5 7-12.3 7-12.3z"/></svg>Water</small><b>89.2 m³</b><em>↓ 18.9% this month</em></div>
-              </div>
-              <div class="mh">Consumption &amp; 3-month forecast</div>
-              <div class="chart"><span style="--h:55%;--i:0"></span><span style="--h:68%;--i:1"></span><span style="--h:62%;--i:2"></span><span class="hot" style="--h:94%;--i:3"></span><span style="--h:70%;--i:4"></span><span style="--h:58%;--i:5"></span><span class="fc" style="--h:52%;--i:6"></span><span class="fc" style="--h:47%;--i:7"></span><span class="fc" style="--h:44%;--i:8"></span></div>
-              <div class="legend"><span>Actual</span><span>AI forecast →</span></div>
-              <div class="alert"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0zM12 9v4M12 17h.01"/></svg><div><b>Water use far above regional average</b><small>+182% per person · check for leaks</small></div></div>
-            </div>
+          <div class="stage">
+            <div class="ghost" aria-hidden="true">سَنا</div>
+            <a class="screens" href="https://layanharbi9.github.io/SANA/" target="_blank" rel="noopener" aria-label="Open the SANA live demo">
+              <div class="bwin main"><div class="wbar"><i></i><i></i><i></i><span>layanharbi9.github.io/SANA</span></div><img src="assets/shots/sana-dashboard.jpg" alt="SANA dashboard: water and electricity use with AI forecasts and a high-usage alert" width="1440" height="890" loading="lazy" decoding="async"></div>
+              <div class="bwin sub"><div class="wbar"><i></i><i></i><i></i><span>سَنا</span></div><img src="assets/shots/sana-landing.jpg" alt="SANA bilingual landing page" width="1440" height="800" loading="lazy" decoding="async"></div>
+              <span class="open-demo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 4 20 12 6 20 6 4"/></svg><span data-i18n="openDemo">Open live demo</span></span>
+            </a>
           </div>
           <div class="cbody">
             <div class="cmeta"><span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10z"/><path d="M2 21c0-3 1.9-5.4 5.1-6"/></svg><span data-i18n="saPill">Graduation capstone</span></span><span data-i18n="saMeta">2025–2026 · Umm Al-Qura University</span></div>
@@ -805,6 +766,7 @@ const I = {
   code: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg>',
   db: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5M3 12c0 1.7 4 3 9 3s9-1.3 9-3"/></svg>',
   wrench: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg>',
+  satellite: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m13.5 6.5-3.1-3.1a1.4 1.4 0 0 0-2 0L5.7 6.1a1.4 1.4 0 0 0 0 2l3.1 3.1"/><path d="m8.5 11.5 4 4"/><path d="m12.8 12.2 3.1 3.1a1.4 1.4 0 0 0 2 0l2.7-2.7a1.4 1.4 0 0 0 0-2l-3.1-3.1"/><path d="m9 9 6-6M15 15l6-6"/><path d="M4 20a6 6 0 0 1 2-4"/><path d="M3 16a10 10 0 0 1 3-5"/></svg>',
   bolt: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg>',
   server: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="8" rx="2"/><rect x="2" y="13" width="20" height="8" rx="2"/><path d="M6 7h.01M6 17h.01"/></svg>',
   wallet: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7H5a2 2 0 0 1 0-4h13v4"/><path d="M3 5v14a2 2 0 0 0 2 2h15V7"/><path d="M16 14h.01"/></svg>',
@@ -843,7 +805,7 @@ const T = {
     saPill:'Graduation capstone', saMeta:'2025–2026 · Umm Al-Qura University', saTag:'Every drop, every kilowatt, every action counts.',
     saDesc:'An AI platform that helps Saudi households understand, forecast, and reduce their water and electricity use — with leak alerts, saving goals, rewards, and a bilingual, accessible dashboard.',
     saM1:'R² electricity forecast', saM2:'AI modules in the backend', saM3v:'Top 7', saM3:'Taqathon national finals',
-    live:'Live demo', cs:'Case study', code:'Code', demo:'Demo',
+    openDemo:'Open live demo', live:'Live demo', cs:'Case study', code:'Code', demo:'Demo',
     eMore:'More projects', tMore:'AI, systems, data &amp; <em>design.</em>',
     eSkills:'Skills', tSkills:'The <em>toolkit.</em>',
     eAwards:'Achievements', tAwards:'Competitions &amp; <em>recognition.</em>', eCerts:'Certifications',
@@ -851,7 +813,7 @@ const T = {
     eContact:'Contact', tContact:"Let's build something <em>remarkable.</em>",
     cLede:"Open to AI Engineer and Agentic AI roles in Saudi Arabia, and to collaborations on products that matter. I'd love to hear from you.",
     cMail:'Say hello', cCv:'Download CV', foot:'Designed &amp; built by',
-    filters:{all:'All', ai:'AI / ML', systems:'Systems', data:'Data', design:'Design & Web', hack:'Hackathons'},
+    filters:{all:'All', ai:'AI / ML', research:'Research', systems:'Systems', data:'Data', design:'Design & Web', hack:'Hackathons'},
     roles:['multi-agent systems.','ML forecasting pipelines.','computer vision models.','products people use.'],
     marquee:['Agentic AI','Multi-Agent Systems','LLM Orchestration','Tool Calling','Machine Learning','Time-Series Forecasting','Computer Vision','Full-Stack','UX/UI','Vision 2030'],
     caseLabels:['The problem','The solution','How it works','Highlights','Team'], close:'Close'
@@ -876,7 +838,7 @@ const T = {
     saPill:'مشروع التخرج', saMeta:'٢٠٢٥–٢٠٢٦ · جامعة أم القرى', saTag:'كل قطرة، كل كيلوواط، كل خطوة تفرق.',
     saDesc:'منصة ذكاء اصطناعي تساعد الأسر السعودية على فهم استهلاك الماء والكهرباء والتنبؤ به وتقليله — مع تنبيهات التسريب وأهداف التوفير والمكافآت ولوحة ثنائية اللغة سهلة الوصول.',
     saM1:'R² لتنبؤ الكهرباء', saM2:'وحدات ذكاء اصطناعي', saM3v:'أفضل ٧', saM3:'نهائي طاقثون الوطني',
-    live:'عرض حي', cs:'دراسة الحالة', code:'الكود', demo:'تجربة',
+    openDemo:'افتح العرض الحي', live:'عرض حي', cs:'دراسة الحالة', code:'الكود', demo:'تجربة',
     eMore:'مشاريع أخرى', tMore:'ذكاء اصطناعي، أنظمة، بيانات <em>وتصميم.</em>',
     eSkills:'المهارات', tSkills:'<em>أدواتي.</em>',
     eAwards:'الإنجازات', tAwards:'مسابقات <em>وتكريمات.</em>', eCerts:'الشهادات',
@@ -884,7 +846,7 @@ const T = {
     eContact:'تواصل', tContact:'لنبنِ شيئاً <em>استثنائياً.</em>',
     cLede:'متاحة لوظائف مهندسة ذكاء اصطناعي والذكاء الاصطناعي الوكيلي في السعودية، وللتعاون في منتجات ذات أثر. يسعدني تواصلك.',
     cMail:'راسليني', cCv:'تحميل السيرة', foot:'صمّمته وبنته',
-    filters:{all:'الكل', ai:'ذكاء اصطناعي', systems:'أنظمة', data:'بيانات', design:'تصميم وويب', hack:'هاكاثونات'},
+    filters:{all:'الكل', ai:'ذكاء اصطناعي', research:'أبحاث', systems:'أنظمة', data:'بيانات', design:'تصميم وويب', hack:'هاكاثونات'},
     roles:['أنظمة متعددة الوكلاء.','خطوط تنبؤ بالتعلم الآلي.','نماذج رؤية حاسوبية.','منتجات يستخدمها الناس.'],
     marquee:['ذكاء اصطناعي وكيلي','أنظمة متعددة الوكلاء','تنسيق نماذج اللغة','استدعاء الأدوات','تعلم آلي','تنبؤ بالسلاسل الزمنية','رؤية حاسوبية','Full-Stack','UX/UI','رؤية ٢٠٣٠'],
     caseLabels:['المشكلة','الحل','كيف يعمل','أبرز النقاط','الفريق'], close:'إغلاق'
@@ -911,7 +873,7 @@ const EXPERIENCE = [
     pts:{en:['Building the association\'s new Arabic website with <b>Next.js 16</b>, React 19, TypeScript, and Tailwind CSS 4.','Developing responsive, accessible interface components across devices.'], ar:['أبني الموقع العربي الجديد للجمعية باستخدام <b>Next.js 16</b> وReact 19 وTypeScript وTailwind CSS 4.','أطوّر مكونات واجهة متجاوبة وسهلة الوصول على مختلف الأجهزة.']} },
   { tag:{en:'1 of 9', ar:'١ من ٩'}, when:{en:'May 2026 – Present', ar:'مايو ٢٠٢٦ – الآن'}, role:{en:'Technical Developer (Volunteer)', ar:'مطورة تقنية (تطوع)'},
     org:{en:'Saudi Space Community — Tech Division', ar:'مجتمع الفضاء السعودي — الشعبة التقنية'},
-    pts:{en:['Selected as 1 of 9 members in the technical division; contributing to software initiatives supporting Vision 2030 space-tech goals.'], ar:['اختِرت ضمن ٩ أعضاء في الشعبة التقنية، وأساهم في مبادرات برمجية تدعم أهداف تقنيات الفضاء في رؤية ٢٠٣٠.']} },
+    pts:{en:['Selected as 1 of 9 members in the technical division; contributing to software initiatives supporting Vision 2030 space-tech goals.','AI Engineer on the community research paper <b>“AI-Assisted UAV and Satellite Imaging for Environmental Monitoring”</b> — fusing satellite and drone imagery with ResNet-50 features and cross-scale attention for semantic segmentation.'], ar:['اختِرت ضمن ٩ أعضاء في الشعبة التقنية، وأساهم في مبادرات برمجية تدعم أهداف تقنيات الفضاء في رؤية ٢٠٣٠.','مهندسة الذكاء الاصطناعي في الورقة البحثية للمجتمع <b>«التصوير بالطائرات المسيّرة والأقمار الصناعية بمساعدة الذكاء الاصطناعي لمراقبة البيئة»</b> — دمج صور الأقمار الصناعية والطائرات المسيّرة بخصائص ResNet-50 وانتباه متعدد المقاييس للتقطيع الدلالي.']} },
   { when:{en:'Feb 2026 – Jun 2026', ar:'فبراير – يونيو ٢٠٢٦'}, role:{en:'Organizational Committee Member', ar:'عضوة اللجنة التنظيمية'},
     org:{en:'UQU Computer Science Club & Robotics and AI Club', ar:'نادي علوم الحاسب ونادي الروبوتات والذكاء الاصطناعي — أم القرى'},
     pts:{en:['Planned and ran student tech events, workshops, and club initiatives; coordinated AI/robotics project timelines and deliverables.'], ar:['خططت ونفذت فعاليات وورش تقنية ومبادرات النادي، ونسّقت جداول مشاريع الذكاء الاصطناعي والروبوتات ومخرجاتها.']} },
@@ -936,6 +898,9 @@ const PROJECTS = [
   { cat:['systems','data'], icon:'wallet', year:'2026', kind:{en:'SaaS Product',ar:'منتج SaaS'}, title:{en:'Wesal — وصال · SaaS Spend Management',ar:'وصال — Wesal · إدارة إنفاق الاشتراكات'},
     desc:{en:'Platform that gives companies one view of their software subscriptions: discovers subscriptions, tracks seat utilization and waste, recommends plan changes and duplicate removals, checks new purchase requests against existing licenses, and runs approval workflows — plus a spend-consultant chat.',ar:'منصة تمنح الشركات رؤية موحدة لاشتراكاتها البرمجية: تكتشف الاشتراكات، وتتابع استخدام المقاعد والهدر، وتوصي بتغيير الخطط وإزالة التكرار، وتراجع طلبات الشراء الجديدة مقابل التراخيص الحالية، وتدير مسارات الاعتماد — مع محادثة مستشار الإنفاق.'},
     tags:['FastAPI','SQLAlchemy','Next.js','TypeScript'], award:{en:'Masar · SANI × Misk × SDAIA',ar:'مسار · سني × مسك × سدايا'} },
+  { cat:['ai','research'], icon:'satellite', year:'2026', kind:{en:'Research Paper',ar:'ورقة بحثية'}, title:{en:'AI-Assisted UAV & Satellite Imaging for Environmental Monitoring',ar:'التصوير بالطائرات المسيّرة والأقمار الصناعية بمساعدة الذكاء الاصطناعي لمراقبة البيئة'},
+    desc:{en:'Fuses wide-coverage satellite imagery with high-detail UAV imagery: a CNN (ResNet-50) extracts features from each source, Cross-Scale Attention Fusion learns how global context and local detail relate, and a decoder performs semantic segmentation to classify environmental elements and phenomena. AI Engineer on the research team.',ar:'يدمج صور الأقمار الصناعية واسعة التغطية مع صور الطائرات المسيّرة عالية التفاصيل: شبكة CNN (ResNet-50) تستخرج الخصائص من كل مصدر، وCross-Scale Attention Fusion يتعلم العلاقة بين السياق الواسع والتفاصيل المحلية، ثم Decoder ينفّذ التقطيع الدلالي لتصنيف العناصر والظواهر البيئية. مهندسة الذكاء الاصطناعي في الفريق البحثي.'},
+    tags:['Remote Sensing','ResNet-50','Attention Fusion','Segmentation'], award:{en:'Saudi Space Community · Research',ar:'مجتمع الفضاء السعودي · بحث'} },
   { cat:['ai','hack'], icon:'trash', year:'2026', kind:{en:'Computer Vision',ar:'رؤية حاسوبية'}, title:{en:'RASED — Smart Waste Monitoring',ar:'راصد — مراقبة النفايات الذكية'},
     desc:{en:'AI/computer-vision MVP for waste analysis, with a supervisor dashboard that shows heatmap alerts and routing for Hajj operations.',ar:'نموذج أولي بالذكاء الاصطناعي والرؤية الحاسوبية لتحليل النفايات، مع لوحة للمشرفين تعرض تنبيهات بخريطة حرارية ومسارات لعمليات الحج.'},
     tags:['Computer Vision','Dashboard','Hajj'], award:{en:'3rd Place · JadaThon',ar:'المركز الثالث · جدة ثون'} },
@@ -951,7 +916,7 @@ const PROJECTS = [
   { cat:['design','hack'], icon:'city', year:'2025', kind:{en:'Hackathon',ar:'هاكاثون'}, title:{en:'Khalya — خلايا',ar:'خلايا — Khalya'},
     desc:{en:'Digital living platform that improves resident–community interaction through smart services aligned with Vision 2030.',ar:'منصة تجربة سكنية رقمية تحسّن التفاعل بين السكان ومجتمعهم بخدمات ذكية متوافقة مع رؤية ٢٠٣٠.'},
     tags:['Smart Cities','UX/UI'], award:{en:'Top 4 of 800+ · ROSHN',ar:'أفضل ٤ من +٨٠٠ · روشن'} },
-  { cat:['ai','hack'], icon:'heart', year:'2025', kind:{en:'Research',ar:'بحث'}, title:{en:'Tanabbuh — تَنَبُّه',ar:'تَنَبُّه — Tanabbuh'},
+  { cat:['ai','hack','research'], icon:'heart', year:'2025', kind:{en:'Research',ar:'بحث'}, title:{en:'Tanabbuh — تَنَبُّه',ar:'تَنَبُّه — Tanabbuh'},
     desc:{en:'AI and computer-vision digital-health app supporting the health of Hajj and Umrah pilgrims, presented at Scientific Forum 25.',ar:'تطبيق صحة رقمية بالذكاء الاصطناعي والرؤية الحاسوبية لدعم صحة ضيوف الرحمن، قُدّم في الملتقى العلمي ٢٥.'},
     tags:['AI','Computer Vision','Healthcare'], award:{en:'Scientific Forum 25',ar:'الملتقى العلمي ٢٥'} },
   { cat:['ai','data'], icon:'chart', year:'2024', kind:{en:'Machine Learning',ar:'تعلم آلي'}, title:{en:'Electricity Consumption Forecasting',ar:'التنبؤ باستهلاك الكهرباء'},
@@ -1004,6 +969,7 @@ const PODIUM = [
 ];
 const HONORS = [
   { icon:'star', rk:{en:'Top 1%',ar:'أفضل ١٪'}, t:{en:'Masar Program — SANI × Misk × SDAIA',ar:'برنامج مسار — سني × مسك × سدايا'}, d:{en:'1 of 60 to complete the full program from 6,000+ applicants',ar:'واحدة من ٦٠ أكملوا البرنامج من أصل +٦٠٠٠ متقدم'} },
+  { icon:'globe', rk:{en:'Top 10 / ~500',ar:'أفضل ١٠ من ~٥٠٠'}, t:{en:'TCS Sustainathon Saudi Arabia 2026 — SANA',ar:'TCS Sustainathon السعودية ٢٠٢٦ — سَنا'}, d:{en:'Finalist with Team RAFD, presenting the SANA idea',ar:'متأهلة للنهائي مع فريق رافد بفكرة سَنا'} },
   { icon:'city', rk:{en:'Top 4 / 800+',ar:'أفضل ٤ من +٨٠٠'}, t:{en:'ROSHN Hackathon — Khalya',ar:'هاكاثون روشن — خلايا'}, d:{en:'Digital Living track',ar:'مسار الحياة الرقمية'} },
   { icon:'spark', rk:{en:'Top 7',ar:'أفضل ٧'}, t:{en:'Taqathon — SANA',ar:'طاقثون — سَنا'}, d:{en:'National finals · Sustainable energy',ar:'النهائي الوطني · الطاقة المستدامة'} },
   { icon:'file', rk:{en:'Research Award',ar:'جائزة ورقة بحثية'}, t:{en:'Hajj & Health Security Hackathon',ar:'هاكاثون أمن الحج والصحة'}, d:{en:'Ministry of Interior',ar:'وزارة الداخلية'} },
@@ -1049,13 +1015,13 @@ const CASES = {
       problem:'Households usually see their consumption as one number on a bill — after the fact. They do not know what drives it, what is coming next, or where waste and leaks are hiding.',
       solution:'SANA combines a bilingual dashboard with a Python AI backend that forecasts consumption and bills, detects anomalies and leaks, and turns data into simple guidance. It works with just two months of history — no expensive IoT devices needed.',
       flow:[['Enter','meter readings and family size, or past bills.'],['Predict','the next 3 months of consumption and bills (LightGBM for electricity, XGBoost for water).'],['Classify','the household as Eco, Normal, High, or Very High against Makkah-specific baselines (K-Means).'],['Detect & alert','unusual spikes and possible continuous leaks (Z-score), with a practical tip.'],['Act & improve','through saving goals, rewards, the chatbot, analytics, and reports.']],
-      feats:['Forecasting R² of 0.98 for electricity and 0.97 for water on our dataset','Gamified rewards and certified volunteering hours','Arabic & English (RTL), voice interaction, high-contrast and colorblind-friendly UI','Reached the Top 7 national finals of Taqathon'],
+      feats:['Forecasting R² of 0.98 for electricity and 0.97 for water on our dataset','Gamified rewards and certified volunteering hours','Arabic & English (RTL), voice interaction, high-contrast and colorblind-friendly UI','Top 7 national finals of Taqathon, and Top 10 of ~500 at TCS Sustainathon Saudi Arabia 2026 (Team RAFD)'],
       team:'<b>Layan Mohammed Alharbi</b>, Ghayah Alhazmi, Raydaa Almabadi & Jory Alotaibi · Supervised by Dr. Tahani Alsubait' },
     ar:{ tag:'مشروع التخرج · ٢٠٢٥–٢٠٢٦', title:'سَنا · SANA', sub:'منصة ذكية لترشيد استهلاك الماء والكهرباء في المنازل.',
       problem:'غالباً ترى الأسر استهلاكها كرقم واحد في الفاتورة بعد فوات الأوان، دون أن تعرف سببه أو ما القادم أو أين يختبئ الهدر والتسريب.',
       solution:'تجمع سَنا لوحة ثنائية اللغة مع خلفية ذكاء اصطناعي بلغة Python تتنبأ بالاستهلاك والفواتير، وتكتشف الشذوذ والتسريبات، وتحوّل البيانات إلى إرشادات بسيطة. تكفي بيانات شهرين — بلا أجهزة IoT مكلفة.',
       flow:[['الإدخال','قراءات العداد وعدد أفراد الأسرة أو الفواتير السابقة.'],['التنبؤ','باستهلاك وفواتير الأشهر الثلاثة القادمة (LightGBM للكهرباء وXGBoost للماء).'],['التصنيف','إلى اقتصادي أو طبيعي أو مرتفع أو مرتفع جداً مقارنة بمعايير مكة (K-Means).'],['الكشف والتنبيه','عن الارتفاعات غير الطبيعية والتسريب المستمر (Z-score) مع نصيحة عملية.'],['العمل والتحسّن','عبر أهداف التوفير والمكافآت والمساعد الذكي والتحليلات والتقارير.']],
-      feats:['دقة تنبؤ R² بلغت ٠٫٩٨ للكهرباء و٠٫٩٧ للماء على بياناتنا','مكافآت تحفيزية وساعات تطوع معتمدة','عربي وإنجليزي، تفاعل صوتي، وتباين عالٍ وألوان مناسبة لعمى الألوان','التأهل لنهائي طاقثون ضمن أفضل ٧ فرق وطنياً'],
+      feats:['دقة تنبؤ R² بلغت ٠٫٩٨ للكهرباء و٠٫٩٧ للماء على بياناتنا','مكافآت تحفيزية وساعات تطوع معتمدة','عربي وإنجليزي، تفاعل صوتي، وتباين عالٍ وألوان مناسبة لعمى الألوان','نهائي طاقثون ضمن أفضل ٧ فرق وطنياً، وأفضل ١٠ من ~٥٠٠ في TCS Sustainathon السعودية ٢٠٢٦ (فريق رافد)'],
       team:'<b>ليان محمد الحربي</b>، Ghayah Alhazmi، Raydaa Almabadi و Jory Alotaibi · بإشراف Dr. Tahani Alsubait' } }
 };
 
