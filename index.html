@@ -612,7 +612,7 @@ body.lock { overflow: hidden; }
     <div class="wrap">
       <div class="head reveal"><div><div class="eyebrow" data-i18n="eWork">Featured work</div>
         <h2 class="title" data-i18n="tWork">Things I've <em>built</em> — try them live.</h2>
-        <p class="lede" data-i18n="workLede">Three flagship projects — two with live demos you can click through right now — plus the full case study behind each one.</p></div></div>
+        <p class="lede" data-i18n="workLede">Three flagship projects with live demos you can click through right now, plus the full case study behind each one.</p></div></div>
 
       <div class="cases">
         <article class="case spot reveal">
@@ -673,11 +673,11 @@ body.lock { overflow: hidden; }
         <article class="case himma spot reveal">
           <div class="stage">
             <div class="ghost" aria-hidden="true">هِمَّة</div>
-            <button type="button" class="screens" data-case="himma" aria-label="Open the HIMMA case study">
-              <div class="bwin main"><div class="wbar"><i></i><i></i><i></i><span>HIMMA · in-cluster UI</span></div><img src="assets/shots/himma-dashboard.jpg" alt="HIMMA dashboard: AI assistant, transcription, OCR, and visual Q&amp;A with live service monitoring" width="1440" height="816" loading="lazy" decoding="async"></div>
+            <a class="screens" href="https://layanharbi9.github.io/HIMMA/" target="_blank" rel="noopener" aria-label="Open the HIMMA live demo">
+              <div class="bwin main"><div class="wbar"><i></i><i></i><i></i><span>layanharbi9.github.io/HIMMA</span></div><img src="assets/shots/himma-dashboard.jpg" alt="HIMMA dashboard: AI assistant, transcription, OCR, and visual Q&amp;A with live service monitoring" width="1440" height="816" loading="lazy" decoding="async"></div>
               <div class="bwin sub"><div class="wbar"><i></i><i></i><i></i><span>AI Assistant</span></div><img src="assets/shots/himma-assistant.jpg" alt="HIMMA AI assistant answering on a self-hosted Qwen2.5-7B model" width="1440" height="816" loading="lazy" decoding="async"></div>
-              <span class="open-demo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4h7a3 3 0 0 1 3 3v14a2 2 0 0 0-2-2H2zM22 4h-7a3 3 0 0 0-3 3v14a2 2 0 0 1 2-2h8z"/></svg><span data-i18n="cs">Case study</span></span>
-            </button>
+              <span class="open-demo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 4 20 12 6 20 6 4"/></svg><span data-i18n="openDemo">Open live demo</span></span>
+            </a>
           </div>
           <div class="cbody">
             <div class="cmeta"><span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="8" rx="2"/><rect x="2" y="13" width="20" height="8" rx="2"/><path d="M6 7h.01M6 17h.01"/></svg><span data-i18n="hiPill">AI Infrastructure</span></span><span data-i18n="hiMeta">Jul 2026 · Masar (SANI × Misk × SDAIA) · Individual</span></div>
@@ -691,7 +691,8 @@ body.lock { overflow: hidden; }
             </div>
             <div class="tags"><span class="tag">Kubernetes (k3s)</span><span class="tag">vLLM</span><span class="tag">Qwen2.5-7B AWQ</span><span class="tag">faster-whisper</span><span class="tag">Prometheus</span><span class="tag">Next.js</span><span class="tag">React</span><span class="tag">TypeScript</span></div>
             <div class="acts">
-              <button type="button" class="btn btn-live" data-case="himma"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4h7a3 3 0 0 1 3 3v14a2 2 0 0 0-2-2H2zM22 4h-7a3 3 0 0 0-3 3v14a2 2 0 0 1 2-2h8z"/></svg><span data-i18n="cs">Case study</span></button>
+              <a class="btn btn-live" href="https://layanharbi9.github.io/HIMMA/" target="_blank" rel="noopener"><span class="dot" aria-hidden="true"></span><span data-i18n="live">Live demo</span></a>
+              <button type="button" class="btn btn-ghost" data-case="himma"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4h7a3 3 0 0 1 3 3v14a2 2 0 0 0-2-2H2zM22 4h-7a3 3 0 0 0-3 3v14a2 2 0 0 1 2-2h8z"/></svg><span data-i18n="cs">Case study</span></button>
               <a class="btn btn-ghost" href="https://hub.docker.com/r/layanalharbi4/himma-ui" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v8"/></svg><span data-i18n="docker">Docker image</span></a>
             </div>
           </div>
@@ -829,7 +830,7 @@ const T = {
     hEdu:'Education', edT:'BSc Computer Science', edS:'Umm Al-Qura University · Faculty of Computing · Class of 2026 · GPA 3.81 / 4.00',
     hLang:'Languages', lAr:'Arabic', lArL:'Native', lEn:'English', lEnL:'Fluent',
     eExp:'Experience', tExp:"Where I've <em>grown.</em>",
-    eWork:'Featured work', tWork:"Things I've <em>built</em> — try them live.", workLede:'Three flagship projects — two with live demos you can click through right now — plus the full case study behind each one.',
+    eWork:'Featured work', tWork:"Things I've <em>built</em> — try them live.", workLede:'Three flagship projects with live demos you can click through right now, plus the full case study behind each one.',
     tlPill:'Agentic AI', tlMeta:'2026 · SDA × WeCloudData Bootcamp', tlTag:'Your needs. Your pieces. Your solution.',
     tlDesc:"A multi-agent system that turns each customer's needs, priorities, and budget into a personalized telecom plan — built only from real packages and add-ons, validated by code-based guardrails, and explained before anything changes.",
     tlM1:'Cooperating AI agents', tlM2:'Code-based safety checks', tlM3:'Catalog-grounded answers',
@@ -865,7 +866,7 @@ const T = {
     hEdu:'التعليم', edT:'بكالوريوس علوم الحاسب', edS:'جامعة أم القرى · كلية الحاسبات · دفعة ٢٠٢٦ · معدل ٣٫٨١ من ٤٫٠٠',
     hLang:'اللغات', lAr:'العربية', lArL:'اللغة الأم', lEn:'الإنجليزية', lEnL:'بطلاقة',
     eExp:'الخبرات', tExp:'محطات <em>نموّي.</em>',
-    eWork:'أعمال مميزة', tWork:'ما <em>بنيته</em> — جرّبه مباشرة.', workLede:'ثلاثة مشاريع رئيسية — اثنان منها بعروض حيّة تقدر تتصفحها الآن — مع دراسة الحالة الكاملة لكل مشروع.',
+    eWork:'أعمال مميزة', tWork:'ما <em>بنيته</em> — جرّبه مباشرة.', workLede:'ثلاثة مشاريع رئيسية بعروض حيّة تقدر تتصفحها الآن، مع دراسة الحالة الكاملة لكل مشروع.',
     tlPill:'ذكاء اصطناعي وكيلي', tlMeta:'٢٠٢٦ · معسكر SDA × WeCloudData', tlTag:'احتياجاتك. قطعك. حلّك.',
     tlDesc:'نظام متعدد الوكلاء يحوّل احتياجات العميل وأولوياته وميزانيته إلى باقة اتصالات مخصصة — مبنية فقط من باقات وإضافات حقيقية، يتحقق منها كود أمان، ويشرحها قبل أي تغيير.',
     tlM1:'وكيلان ذكيان متعاونان', tlM2:'فحوصات أمان برمجية', tlM3:'إجابات من الكتالوج فقط',
@@ -1045,7 +1046,7 @@ const CASES = {
       flow:[['مدخلات منظمة','يختار العميل أهم ٣ احتياجات ومستوى كل منها وميزانيته.'],['وكيل البحث','يسترجع باقات وإضافات حقيقية فقط من كتالوج SQLite موحّد.'],['وكيل تصميم الحلول','يبني حتى ٣ حلول (باقة + ٠–٢ إضافات) ويسعّرها ويقارنها ويوصي بأحدها.'],['ضوابط الأمان','كود يتحقق أن كل عنصر موجود والتركيبة صحيحة والسعر دقيق ولا يتجاوز الميزانية بأكثر من ١٥٪.'],['العميل يقرر','أداة التطبيق تحدّث الباقة فقط بعد اختيار العميل.']],
       feats:['لا باقات أو أسعار أو معرّفات مخترعة — كل إجابة من الكتالوج','عرض مباشر لتقدّم البناء ليشاهد العميل عمل الوكلاء','لوحة إدارة: رحلة كل طلب وصحة الوكلاء واستخدام الكتالوج','تتبع السرعة والتكلفة عبر LangSmith وحزمة تقييم بمعايير LLM-judge'],
       team:'<b>ليان الحربي</b> و<b>Farah Alhajjaji</b> · بإشراف Hao Mai و Mohamed Almoghalis' } },
-  himma: { demo:'https://hub.docker.com/r/layanalharbi4/himma-ui', demoLabel:{en:'Docker image',ar:'صورة Docker'},
+  himma: { demo:'https://layanharbi9.github.io/HIMMA/',
     photo:{ diagram:true, src:'assets/shots/himma-architecture.jpg', en:'HIMMA infrastructure architecture: edge, control plane, CPU workers, and GPU inference', ar:'معمارية همّة: طبقة الوصول، ومستوى التحكم، وعقد المعالجة، وطبقة الاستدلال على GPU' },
     en:{ tag:'AI Infrastructure · Jul 2026', title:'HIMMA · هِمَّة', sub:'The Sovereign AI Platform — internal AI infrastructure for a regulated enterprise. Individual final project, Masar AI Infrastructure track.',
       problem:'A regulated enterprise of ~2,000 employees wants AI, but policy is absolute: no company data may leave company infrastructure — no external AI APIs and no cloud inference. Its earlier 1.5B CPU chatbot was too weak for real drafting and reasoning.',
