@@ -426,11 +426,13 @@ html[dir="rtl"] .card .kind { letter-spacing: 0.02em; }
 .chips span.hot { background: var(--grad-soft); border-color: rgba(192,132,252,0.35); }
 
 /* ---------- achievements ---------- */
-.podium { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 1rem; }
-@media (max-width: 820px) { .podium { grid-template-columns: 1fr; } }
+.podium { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 1rem; }
+@media (max-width: 1020px) { .podium { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .podium { grid-template-columns: 1fr; } }
 .medal { padding: 1.7rem; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 0.6rem; }
 .medal .m { width: 66px; height: 66px; border-radius: 50%; display: grid; place-items: center; font-family: var(--serif); font-size: 1.6rem; font-weight: 600; color: #1a1205; box-shadow: 0 12px 34px -10px rgba(251,191,36,0.7), inset 0 2px 0 rgba(255,255,255,0.6); }
 .medal .m.g1 { background: linear-gradient(135deg, #fde68a, #f59e0b); }
+.medal .m.g2 { background: linear-gradient(135deg, #f1f5f9, #94a3b8); color: #1e293b; box-shadow: 0 12px 34px -10px rgba(148,163,184,0.7), inset 0 2px 0 rgba(255,255,255,0.7); }
 .medal .m.g3 { background: linear-gradient(135deg, #fed7aa, #c2410c); color: #fff7ed; box-shadow: 0 12px 34px -10px rgba(194,65,12,0.6), inset 0 2px 0 rgba(255,255,255,0.4); }
 .medal .rank { font-size: 0.7rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); }
 .medal h4 { font-size: 1.02rem; font-weight: 700; line-height: 1.35; }
@@ -573,7 +575,7 @@ body.lock { overflow: hidden; }
         <div class="frame"><img src="assets/layan-photo.jpg" alt="Layan Mohammed Alharbi" width="380" height="475" fetchpriority="high" /></div>
         <div class="float f1"><span class="fi" style="background:rgba(192,132,252,.18);color:#c084fc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="12" rx="3"/><path d="M12 8V4M8 14h.01M16 14h.01M9 18h6"/></svg></span><span><b data-i18n="fl1">Multi-Agent AI</b><small>TELORA</small></span></div>
         <div class="float f2"><span class="fi" style="background:rgba(45,212,191,.18);color:#2dd4bf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></svg></span><span><b>R² 0.98</b><small data-i18n="fl2">SANA forecasting</small></span></div>
-        <div class="float f3"><span class="fi" style="background:rgba(251,191,36,.18);color:#fbbf24"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0z"/></svg></span><span><b data-i18n="fl3">3 podium finishes</b><small data-i18n="fl3s">National hackathons</small></span></div>
+        <div class="float f3"><span class="fi" style="background:rgba(251,191,36,.18);color:#fbbf24"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0z"/></svg></span><span><b data-i18n="fl3">4 podium finishes</b><small data-i18n="fl3s">National hackathons</small></span></div>
         <div class="socials">
           <a class="soc" href="https://linkedin.com/in/layan-alharbi-b65a78363" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
           <a class="soc" href="https://github.com/Layanharbi9" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0a12 12 0 0 0-3.8 23.39c.6.11.8-.26.8-.58v-2.23c-3.34.73-4.03-1.42-4.03-1.42-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49 1 .11-.78.42-1.31.76-1.6-2.67-.31-5.47-1.34-5.47-5.94 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.11-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.65 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.62-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.19.7.8.58A12 12 0 0 0 12 0z"/></svg></a>
@@ -803,6 +805,10 @@ const I = {
   code: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg>',
   db: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5M3 12c0 1.7 4 3 9 3s9-1.3 9-3"/></svg>',
   wrench: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg>',
+  bolt: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg>',
+  server: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="8" rx="2"/><rect x="2" y="13" width="20" height="8" rx="2"/><path d="M6 7h.01M6 17h.01"/></svg>',
+  wallet: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7H5a2 2 0 0 1 0-4h13v4"/><path d="M3 5v14a2 2 0 0 0 2 2h15V7"/><path d="M16 14h.01"/></svg>',
+  box: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v8"/></svg>',
   x: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>',
   alert: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>',
   bulb: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg>',
@@ -822,7 +828,7 @@ const T = {
     chip:'Makkah, Saudi Arabia · Open to AI Engineer roles', n1:'Layan', n2:'Alharbi', roleLead:'AI Engineer building',
     bio:'Computer Science graduate (First-Class Honors) who designs LLM-powered agents with tool calling, validation loops, and explainable recommendations — alongside ML forecasting pipelines and computer vision models. Top-1% performer in national AI programs with Misk and SDAIA.',
     bGpa:'GPA 3.81 · First-Class Honors', bTop:'Top 1% · Masar (SANI × Misk × SDAIA)', bWin:'1st Place · Al-Baha Innovation Hackathon',
-    ctaWork:'Explore my work', ctaDemo:'Try TELORA live', fl1:'Multi-Agent AI', fl2:'SANA forecasting', fl3:'3 podium finishes', fl3s:'National hackathons', scroll:'Scroll',
+    ctaWork:'Explore my work', ctaDemo:'Try TELORA live', fl1:'Multi-Agent AI', fl2:'SANA forecasting', fl3:'4 podium finishes', fl3s:'National hackathons', scroll:'Scroll',
     eAbout:'About', tAbout:'Turning ideas into <em>intelligent</em> products.',
     ab1:"I'm an AI Engineer from Makkah who loves the moment an idea becomes something people can actually use. My focus is agentic AI — systems where LLM agents search, design, validate, and explain their decisions — and machine learning that turns raw data into forecasts people can act on.",
     ab2:"I graduated from Umm Al-Qura University with First-Class Honors, completed the selective Masar program (SANI × Misk × SDAIA) and SDA's Agentic AI track, and I keep competing in national hackathons — building products that serve Vision 2030, in Arabic and English.",
@@ -845,7 +851,7 @@ const T = {
     eContact:'Contact', tContact:"Let's build something <em>remarkable.</em>",
     cLede:"Open to AI Engineer and Agentic AI roles in Saudi Arabia, and to collaborations on products that matter. I'd love to hear from you.",
     cMail:'Say hello', cCv:'Download CV', foot:'Designed &amp; built by',
-    filters:{all:'All', ai:'AI / ML', agents:'Agents', systems:'Systems', data:'Data', design:'Design & Web', hack:'Hackathons'},
+    filters:{all:'All', ai:'AI / ML', systems:'Systems', data:'Data', design:'Design & Web', hack:'Hackathons'},
     roles:['multi-agent systems.','ML forecasting pipelines.','computer vision models.','products people use.'],
     marquee:['Agentic AI','Multi-Agent Systems','LLM Orchestration','Tool Calling','Machine Learning','Time-Series Forecasting','Computer Vision','Full-Stack','UX/UI','Vision 2030'],
     caseLabels:['The problem','The solution','How it works','Highlights','Team'], close:'Close'
@@ -855,7 +861,7 @@ const T = {
     chip:'مكة المكرمة · متاحة لوظائف مهندسة ذكاء اصطناعي', n1:'ليان', n2:'الحربي', roleLead:'مهندسة ذكاء اصطناعي أبني',
     bio:'خريجة علوم حاسب بمرتبة الشرف الأولى، أصمم وكلاء ذكاء اصطناعي مدعومين بنماذج اللغة مع استدعاء الأدوات وحلقات التحقق وتوصيات قابلة للتفسير — إلى جانب خطوط تنبؤ بالتعلم الآلي ونماذج رؤية حاسوبية. ضمن أفضل ١٪ في برامج وطنية للذكاء الاصطناعي مع مسك وسدايا.',
     bGpa:'معدل ٣٫٨١ · مرتبة الشرف الأولى', bTop:'أفضل ١٪ · مسار (سني × مسك × سدايا)', bWin:'المركز الأول · هاكاثون الباحة للابتكار',
-    ctaWork:'استكشف أعمالي', ctaDemo:'جرّب TELORA مباشرة', fl1:'ذكاء اصطناعي متعدد الوكلاء', fl2:'تنبؤات سَنا', fl3:'٣ مراكز متقدمة', fl3s:'هاكاثونات وطنية', scroll:'مرّر',
+    ctaWork:'استكشف أعمالي', ctaDemo:'جرّب TELORA مباشرة', fl1:'ذكاء اصطناعي متعدد الوكلاء', fl2:'تنبؤات سَنا', fl3:'٤ مراكز متقدمة', fl3s:'هاكاثونات وطنية', scroll:'مرّر',
     eAbout:'عني', tAbout:'أحوّل الأفكار إلى <em>منتجات ذكية.</em>',
     ab1:'مهندسة ذكاء اصطناعي من مكة، أحب اللحظة التي تتحول فيها الفكرة إلى شيء يستخدمه الناس فعلاً. أركّز على الذكاء الاصطناعي الوكيلي — أنظمة يبحث فيها وكلاء نماذج اللغة ويصممون ويتحققون ويشرحون قراراتهم — وعلى التعلم الآلي الذي يحوّل البيانات إلى تنبؤات قابلة للتنفيذ.',
     ab2:'تخرجت من جامعة أم القرى بمرتبة الشرف الأولى، وأكملت برنامج مسار الانتقائي (سني × مسك × سدايا) ومسار الذكاء الاصطناعي الوكيلي في الأكاديمية السعودية الرقمية، وما زلت أنافس في الهاكاثونات الوطنية — لأبني منتجات تخدم رؤية ٢٠٣٠ بالعربية والإنجليزية.',
@@ -878,7 +884,7 @@ const T = {
     eContact:'تواصل', tContact:'لنبنِ شيئاً <em>استثنائياً.</em>',
     cLede:'متاحة لوظائف مهندسة ذكاء اصطناعي والذكاء الاصطناعي الوكيلي في السعودية، وللتعاون في منتجات ذات أثر. يسعدني تواصلك.',
     cMail:'راسليني', cCv:'تحميل السيرة', foot:'صمّمته وبنته',
-    filters:{all:'الكل', ai:'ذكاء اصطناعي', agents:'وكلاء', systems:'أنظمة', data:'بيانات', design:'تصميم وويب', hack:'هاكاثونات'},
+    filters:{all:'الكل', ai:'ذكاء اصطناعي', systems:'أنظمة', data:'بيانات', design:'تصميم وويب', hack:'هاكاثونات'},
     roles:['أنظمة متعددة الوكلاء.','خطوط تنبؤ بالتعلم الآلي.','نماذج رؤية حاسوبية.','منتجات يستخدمها الناس.'],
     marquee:['ذكاء اصطناعي وكيلي','أنظمة متعددة الوكلاء','تنسيق نماذج اللغة','استدعاء الأدوات','تعلم آلي','تنبؤ بالسلاسل الزمنية','رؤية حاسوبية','Full-Stack','UX/UI','رؤية ٢٠٣٠'],
     caseLabels:['المشكلة','الحل','كيف يعمل','أبرز النقاط','الفريق'], close:'إغلاق'
@@ -891,14 +897,18 @@ const EXPERIENCE = [
     org:{en:'Saudi Digital Academy (SDA) · with WeCloudData', ar:'الأكاديمية السعودية الرقمية (SDA) · مع WeCloudData'},
     pts:{en:['Completing a <b>280-hour intensive</b> on agentic AI: multi-agent workflows, tool calling, LLM orchestration, and API/data integration for enterprise automation.','Built <b>TELORA</b> with LangGraph, FastAPI, and OpenAI — grounded retrieval, code-based guardrails, evaluation, and LangSmith observability.'],
          ar:['برنامج مكثف <b>٢٨٠ ساعة</b> في الذكاء الاصطناعي الوكيلي: سير عمل متعدد الوكلاء، استدعاء الأدوات، تنسيق نماذج اللغة، وتكامل الواجهات والبيانات لأتمتة المؤسسات.','بنيت <b>TELORA</b> باستخدام LangGraph وFastAPI وOpenAI — استرجاع مؤسَّس على البيانات، ضوابط أمان برمجية، تقييم، ومراقبة عبر LangSmith.']} },
+  { when:{en:'Jul 2026 – Sep 2026', ar:'يوليو – سبتمبر ٢٠٢٦'}, role:{en:'Web Developer (Volunteer) — Technology Department', ar:'مطورة ويب (تطوع) — القسم التقني'},
+    org:{en:'Baseeratak (بصيرتك)', ar:'شركة بصيرتك'},
+    pts:{en:['Worked on Baseeratak\'s legal-training platform for law students — a virtual court where trainees submit case work and lawyers review and grade it.','Built the platform\'s <b>admin dashboard</b>: case management (create, edit, and delete criminal, labor, commercial, civil, and personal-status cases), case-document management (upload, edit, download, delete), and <b>lawyer management with an approval workflow</b> (pending / accepted / rejected).','Added the admin layout and navigation, role-based login routing, and the Appwrite integration — <b>React</b>, <b>Tailwind CSS</b>, <b>Appwrite</b>.'],
+         ar:['عملت على منصة بصيرتك للتدريب القانوني لطلاب القانون — محكمة افتراضية يرفع فيها المتدربون أعمال القضايا ويراجعها المحامون ويقيّمونها.','بنيت <b>لوحة تحكم المشرف</b>: إدارة القضايا (إضافة وتعديل وحذف القضايا الجنائية والعمالية والتجارية والمدنية والأحوال الشخصية)، وإدارة مستندات القضايا (رفع وتعديل وتنزيل وحذف)، و<b>إدارة المحامين مع مسار اعتماد</b> (بانتظار الاعتماد / مقبول / مرفوض).','أضفت هيكل لوحة المشرف والتنقل، وتوجيه تسجيل الدخول حسب الدور، والتكامل مع Appwrite — باستخدام <b>React</b> و<b>Tailwind CSS</b> و<b>Appwrite</b>.']} },
   { hl:true, tag:{en:'Top 1%', ar:'أفضل ١٪'}, when:{en:'Jun 2026 – Aug 2026', ar:'يونيو – أغسطس ٢٠٢٦'},
     role:{en:'AI Infrastructure Trainee — Masar Program', ar:'متدربة البنية التحتية للذكاء الاصطناعي — برنامج مسار'},
     org:{en:'SANI × Misk Foundation × SDAIA', ar:'سني × مؤسسة مسك × سدايا'},
-    pts:{en:['Completed a <b>100+ hour, two-phase</b> AI infrastructure and product development program — selected among <b>140 finalists from 6,000+ applicants</b> (top 1%) and <b>one of 60</b> to complete the full program.','<b>Phase 1 · AI Infrastructure:</b> deployed and explored a live <b>k3s Kubernetes</b> cluster and produced a formal technical report on its architecture and workflows.','<b>Phase 2 · Product Development:</b> co-developed <b>Raqeeb</b>, a governance solution for enterprise recurring commitments — researched gaps in the Saudi SaaS subscription market and built <b>two agents</b> that search for and design subscription plans for companies.'],
-         ar:['أكملت برنامجاً من <b>مرحلتين يتجاوز ١٠٠ ساعة</b> في البنية التحتية للذكاء الاصطناعي وتطوير المنتجات — اختِرت ضمن <b>١٤٠ متأهلاً من +٦٠٠٠ متقدم</b> (أفضل ١٪) و<b>واحدة من ٦٠</b> أكملوا البرنامج كاملاً.','<b>المرحلة الأولى · البنية التحتية:</b> نشرت واستكشفت عنقود <b>k3s Kubernetes</b> حي، وأعددت تقريراً تقنياً رسمياً عن معماريته وسير عمله.','<b>المرحلة الثانية · تطوير المنتج:</b> شاركت في تطوير <b>رقيب</b>، حل حوكمة للالتزامات المتكررة في المؤسسات — بحثت فجوات سوق اشتراكات SaaS في السعودية وبنيت <b>وكيلين</b> للبحث عن خطط الاشتراك وتصميمها للشركات.']} },
+    pts:{en:['Completed a <b>100+ hour, two-phase</b> AI infrastructure and product development program — selected among <b>140 finalists from 6,000+ applicants</b> (top 1%) and <b>one of 60</b> to complete the full program.','<b>Phase 1 · AI Infrastructure — HIMMA:</b> designed and deployed a sovereign, self-hosted AI platform on a live <b>k3s Kubernetes</b> cluster with one NVIDIA T4 — an LLM assistant (Qwen2.5-7B AWQ on vLLM), meeting transcription, OCR, and visual Q&amp;A, with Prometheus/Grafana monitoring, RBAC, and NetworkPolicies — and defended it in a formal technical report.','<b>Phase 2 · Product Development — Wesal:</b> co-developed a SaaS spend-management platform that discovers company subscriptions, flags unused seats and duplicates, reviews new purchases against existing licenses, and runs approval workflows — after researching gaps in the Saudi SaaS subscription market.'],
+         ar:['أكملت برنامجاً من <b>مرحلتين يتجاوز ١٠٠ ساعة</b> في البنية التحتية للذكاء الاصطناعي وتطوير المنتجات — اختِرت ضمن <b>١٤٠ متأهلاً من +٦٠٠٠ متقدم</b> (أفضل ١٪) و<b>واحدة من ٦٠</b> أكملوا البرنامج كاملاً.','<b>المرحلة الأولى · البنية التحتية — همّة:</b> صممت ونشرت منصة ذكاء اصطناعي سيادية مستضافة ذاتياً على عنقود <b>k3s Kubernetes</b> حي ببطاقة NVIDIA T4 — مساعد لغوي (Qwen2.5-7B AWQ على vLLM)، وتفريغ الاجتماعات، والتعرف الضوئي على النصوص، والأسئلة البصرية، مع مراقبة Prometheus/Grafana وصلاحيات RBAC وسياسات الشبكة — ودافعت عنها في تقرير تقني رسمي.','<b>المرحلة الثانية · تطوير المنتج — وصال:</b> شاركت في تطوير منصة لإدارة إنفاق اشتراكات SaaS تكتشف اشتراكات الشركة، وترصد المقاعد غير المستخدمة والتكرار، وتراجع طلبات الشراء الجديدة مقابل التراخيص الحالية، وتدير مسارات الاعتماد — بعد دراسة فجوات سوق اشتراكات SaaS في السعودية.']} },
   { when:{en:'May 2026 – Present', ar:'مايو ٢٠٢٦ – الآن'}, role:{en:'Frontend Developer (Volunteer)', ar:'مطورة واجهات (تطوع)'},
     org:{en:'Numu Association', ar:'جمعية نمو'},
-    pts:{en:['Developed responsive, accessible interface components across devices for the association\'s digital platform.'], ar:['طوّرت مكونات واجهة متجاوبة وسهلة الوصول على مختلف الأجهزة لمنصة الجمعية الرقمية.']} },
+    pts:{en:['Building the association\'s new Arabic website with <b>Next.js 16</b>, React 19, TypeScript, and Tailwind CSS 4.','Developing responsive, accessible interface components across devices.'], ar:['أبني الموقع العربي الجديد للجمعية باستخدام <b>Next.js 16</b> وReact 19 وTypeScript وTailwind CSS 4.','أطوّر مكونات واجهة متجاوبة وسهلة الوصول على مختلف الأجهزة.']} },
   { tag:{en:'1 of 9', ar:'١ من ٩'}, when:{en:'May 2026 – Present', ar:'مايو ٢٠٢٦ – الآن'}, role:{en:'Technical Developer (Volunteer)', ar:'مطورة تقنية (تطوع)'},
     org:{en:'Saudi Space Community — Tech Division', ar:'مجتمع الفضاء السعودي — الشعبة التقنية'},
     pts:{en:['Selected as 1 of 9 members in the technical division; contributing to software initiatives supporting Vision 2030 space-tech goals.'], ar:['اختِرت ضمن ٩ أعضاء في الشعبة التقنية، وأساهم في مبادرات برمجية تدعم أهداف تقنيات الفضاء في رؤية ٢٠٣٠.']} },
@@ -917,9 +927,15 @@ const EXPERIENCE = [
 ];
 
 const PROJECTS = [
-  { cat:['ai','agents'], icon:'bot', year:'2026', kind:{en:'Agentic AI',ar:'ذكاء وكيلي'}, title:{en:'Raqeeb — رقيب',ar:'رقيب — Raqeeb'},
-    desc:{en:'Governance solution for enterprise recurring commitments, built in the Masar program. Two agents search for and design subscription plans for companies, grounded in research on Saudi SaaS market gaps.',ar:'حل حوكمة للالتزامات المتكررة في المؤسسات ضمن برنامج مسار. وكيلان يبحثان عن خطط الاشتراك ويصممانها للشركات، مبنيان على بحث في فجوات سوق SaaS السعودي.'},
-    tags:['Multi-Agent','LLMs','Product'], award:{en:'Masar · SANI × Misk × SDAIA',ar:'مسار · سني × مسك × سدايا'} },
+  { cat:['hack','ai'], icon:'bolt', year:'2026', kind:{en:'GovTech · Automation',ar:'تقنية حكومية · أتمتة'}, title:{en:'Munjiz — مُنجز',ar:'مُنجز — Munjiz'},
+    desc:{en:'An automation layer on top of Absher\'s e-services that maps official failure codes to automatic closing actions — so stalled residency and visa transactions close before the 3-day fine window, issues are caught before submission, and officers get an explainable smart summary, with mandatory human review for sensitive cases. AI Engineer in a 5-member team.',ar:'طبقة أتمتة فوق خدمات أبشر الإلكترونية تربط رموز التعثر الرسمية بإجراءات إغلاق تلقائية — لتُغلق معاملات الإقامة والتأشيرات المتعثرة قبل نافذة الغرامة (٣ أيام)، وتُكتشف المشكلات قبل الإرسال، ويحصل الموظف على ملخص ذكي قابل للتفسير، مع مراجعة بشرية إلزامية للحالات الحساسة. مهندسة الذكاء الاصطناعي في فريق من ٥.'},
+    tags:['Intelligent Automation','Load Forecasting','Business Continuity'], award:{en:'2nd Place · Gov E-Services Hackathon',ar:'المركز الثاني · هاكاثون الخدمات الإلكترونية'} },
+  { cat:['ai','systems'], icon:'server', year:'2026', kind:{en:'AI Infrastructure',ar:'بنية تحتية للذكاء الاصطناعي'}, title:{en:'HIMMA — همّة · Sovereign AI Platform',ar:'همّة — HIMMA · منصة ذكاء اصطناعي سيادية'},
+    desc:{en:'Self-hosted AI platform for a regulated enterprise where no data may leave company infrastructure: Qwen2.5-7B AWQ on vLLM, faster-whisper transcription, Tesseract OCR, and Qwen2-VL visual Q&A on a k3s cluster with one T4 — plus monitoring, RBAC, NetworkPolicies, and a bilingual Next.js UI. 0.75 s first token, ~47 tokens/s, self-heals in 37 s.',ar:'منصة ذكاء اصطناعي مستضافة ذاتياً لمؤسسة منظَّمة لا تخرج بياناتها من بنيتها: Qwen2.5-7B AWQ على vLLM، وتفريغ صوتي بـ faster-whisper، وOCR بـ Tesseract، وأسئلة بصرية بـ Qwen2-VL على عنقود k3s ببطاقة T4 واحدة — مع المراقبة وRBAC وسياسات الشبكة وواجهة Next.js ثنائية اللغة. أول رمز في ٠٫٧٥ ث، ونحو ٤٧ رمز/ث، وتعافٍ ذاتي خلال ٣٧ ث.'},
+    tags:['Kubernetes (k3s)','vLLM','Docker','Prometheus'], award:{en:'Masar · SANI × Misk × SDAIA',ar:'مسار · سني × مسك × سدايا'}, demo:'https://hub.docker.com/r/layanalharbi4/himma-ui', demoLabel:{en:'Docker image',ar:'صورة Docker'} },
+  { cat:['systems','data'], icon:'wallet', year:'2026', kind:{en:'SaaS Product',ar:'منتج SaaS'}, title:{en:'Wesal — وصال · SaaS Spend Management',ar:'وصال — Wesal · إدارة إنفاق الاشتراكات'},
+    desc:{en:'Platform that gives companies one view of their software subscriptions: discovers subscriptions, tracks seat utilization and waste, recommends plan changes and duplicate removals, checks new purchase requests against existing licenses, and runs approval workflows — plus a spend-consultant chat.',ar:'منصة تمنح الشركات رؤية موحدة لاشتراكاتها البرمجية: تكتشف الاشتراكات، وتتابع استخدام المقاعد والهدر، وتوصي بتغيير الخطط وإزالة التكرار، وتراجع طلبات الشراء الجديدة مقابل التراخيص الحالية، وتدير مسارات الاعتماد — مع محادثة مستشار الإنفاق.'},
+    tags:['FastAPI','SQLAlchemy','Next.js','TypeScript'], award:{en:'Masar · SANI × Misk × SDAIA',ar:'مسار · سني × مسك × سدايا'} },
   { cat:['ai','hack'], icon:'trash', year:'2026', kind:{en:'Computer Vision',ar:'رؤية حاسوبية'}, title:{en:'RASED — Smart Waste Monitoring',ar:'راصد — مراقبة النفايات الذكية'},
     desc:{en:'AI/computer-vision MVP for waste analysis, with a supervisor dashboard that shows heatmap alerts and routing for Hajj operations.',ar:'نموذج أولي بالذكاء الاصطناعي والرؤية الحاسوبية لتحليل النفايات، مع لوحة للمشرفين تعرض تنبيهات بخريطة حرارية ومسارات لعمليات الحج.'},
     tags:['Computer Vision','Dashboard','Hajj'], award:{en:'3rd Place · JadaThon',ar:'المركز الثالث · جدة ثون'} },
@@ -982,6 +998,7 @@ const SKILLS = [
 
 const PODIUM = [
   { m:'1', cls:'g1', rank:{en:'1st Place',ar:'المركز الأول'}, title:{en:'Government Services Innovation Hackathon',ar:'هاكاثون الابتكار في الخدمات الحكومية'}, sub:{en:'Al-Baha Emirate · Aug 2025',ar:'إمارة منطقة الباحة · أغسطس ٢٠٢٥'} },
+  { m:'2', cls:'g2', rank:{en:'2nd Place',ar:'المركز الثاني'}, title:{en:'Government E-Services Hackathon 2026 — Munjiz',ar:'هاكاثون الخدمات الإلكترونية الحكومية ٢٠٢٦ — مُنجز'}, sub:{en:'Passports (MOI) · Automation & Operational Efficiency track',ar:'الجوازات (وزارة الداخلية) · مسار الأتمتة والكفاءة التشغيلية'} },
   { m:'3', cls:'g3', rank:{en:'3rd Place',ar:'المركز الثالث'}, title:{en:'JadaThon (Jada 30) — RASED',ar:'جدة ثون (جدة ٣٠) — راصد'}, sub:{en:'Smart waste monitoring for Hajj',ar:'مراقبة النفايات الذكية للحج'} },
   { m:'3', cls:'g3', rank:{en:'3rd Place',ar:'المركز الثالث'}, title:{en:'Riyadh Municipality Smart Cities Hackathon',ar:'هاكاثون المدن الذكية — أمانة الرياض'}, sub:{en:'"Eye Al-Riyadh" · May 2025',ar:'«عين الرياض» · مايو ٢٠٢٥'} }
 ];
@@ -1069,7 +1086,7 @@ function renderProjects() {
     return `<button type="button" class="ft${filter === k ? ' on' : ''}" data-filter="${k}" aria-pressed="${filter === k}">${F[k]}<span>${n}</span></button>`;
   }).join('');
   $('#grid').innerHTML = PROJECTS.map(p => {
-    const links = [p.demo && `<a href="${p.demo}" target="_blank" rel="noopener">${I.play}${T[lang].demo}</a>`,
+    const links = [p.demo && `<a href="${p.demo}" target="_blank" rel="noopener">${p.demoLabel ? I.box : I.play}${p.demoLabel ? t(p.demoLabel) : T[lang].demo}${p.demoLabel ? I.arrow : ''}</a>`,
                    p.code && `<a href="${p.code}" target="_blank" rel="noopener">${I.github}${T[lang].code}${I.arrow}</a>`].filter(Boolean).join('');
     return `<article class="spot card reveal${filter !== 'all' && !p.cat.includes(filter) ? ' hide' : ''}">
       <div class="card-top"><span class="ico">${I[p.icon]}</span><span class="yr">${p.year}</span></div>
