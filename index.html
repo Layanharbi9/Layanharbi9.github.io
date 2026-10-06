@@ -309,6 +309,8 @@ html[dir="rtl"] .b h3 { letter-spacing: 0.02em; }
 .case.rev { grid-template-columns: 1fr 1.05fr; }
 .case.rev .stage { order: 2; }
 .case.sana { --c1: #2dd4bf; --c2: #38bdf8; }
+.case.himma { --c1: #60a5fa; --c2: #a78bfa; }
+button.screens { border: 0; background: none; padding: 0; cursor: pointer; font: inherit; color: inherit; }
 .case:hover { box-shadow: 0 40px 100px -40px color-mix(in srgb, var(--c1) 55%, transparent); }
 @media (max-width: 920px) { .case, .case.rev { grid-template-columns: 1fr; } .case.rev .stage { order: 0; } }
 .stage { position: relative; min-height: 420px; display: grid; place-items: center; padding: 2.2rem; overflow: hidden; background: radial-gradient(ellipse 70% 60% at 25% 15%, color-mix(in srgb, var(--c1) 34%, transparent), transparent 70%), radial-gradient(ellipse 60% 60% at 85% 90%, color-mix(in srgb, var(--c2) 26%, transparent), transparent 70%), #0c0918; }
@@ -458,6 +460,7 @@ footer b { background: var(--grad); -webkit-background-clip: text; background-cl
 .m-back { position: fixed; inset: 0; background: rgba(4,2,12,0.75); backdrop-filter: blur(10px); animation: fade 0.35s ease both; }
 .m-card { --c1: #c084fc; --c2: #f472b6; position: relative; width: 100%; max-width: 820px; border-radius: 30px; overflow: hidden; background: var(--bg-2); border: 1px solid var(--line-2); box-shadow: 0 50px 140px rgba(0,0,0,0.6); animation: pop 0.5s var(--ease) both; }
 .m-card.sana { --c1: #2dd4bf; --c2: #38bdf8; }
+.m-card.himma { --c1: #60a5fa; --c2: #a78bfa; }
 @keyframes fade { from { opacity: 0; } }
 @keyframes pop { from { opacity: 0; transform: translateY(40px) scale(0.97); } }
 .m-head { position: relative; padding: 2.4rem 2.4rem 1.9rem; border-bottom: 1px solid var(--line); background: radial-gradient(ellipse 80% 140% at 0% 0%, color-mix(in srgb, var(--c1) 30%, transparent), transparent 70%), radial-gradient(ellipse 60% 120% at 100% 100%, color-mix(in srgb, var(--c2) 20%, transparent), transparent 70%); }
@@ -470,6 +473,8 @@ footer b { background: var(--grad); -webkit-background-clip: text; background-cl
 @media (max-width: 560px) { .m-head, .m-body { padding-left: 1.3rem; padding-right: 1.3rem; } }
 .m-photo { border-radius: 20px; overflow: hidden; border: 1px solid var(--line); position: relative; }
 .m-photo img { width: 100%; max-height: 380px; object-fit: cover; object-position: 50% 30%; }
+.m-photo.diagram img { max-height: none; object-fit: contain; background: #f8fafc; }
+.m-photo.diagram figcaption { position: static; padding: 0.7rem 1rem; color: var(--muted); background: var(--surface); }
 .m-photo figcaption { position: absolute; bottom: 0; left: 0; right: 0; padding: 1.4rem 1rem 0.8rem; font-size: 0.78rem; font-weight: 600; color: #fff; background: linear-gradient(transparent, rgba(0,0,0,0.75)); }
 .m-sec h4 { display: flex; align-items: center; gap: 0.5rem; font-size: 0.68rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; color: var(--c1); margin-bottom: 0.7rem; }
 html[dir="rtl"] .m-sec h4 { letter-spacing: 0.02em; }
@@ -607,7 +612,7 @@ body.lock { overflow: hidden; }
     <div class="wrap">
       <div class="head reveal"><div><div class="eyebrow" data-i18n="eWork">Featured work</div>
         <h2 class="title" data-i18n="tWork">Things I've <em>built</em> — try them live.</h2>
-        <p class="lede" data-i18n="workLede">Two flagship products with live demos you can click through right now, plus the full case study behind each one.</p></div></div>
+        <p class="lede" data-i18n="workLede">Three flagship projects — two with live demos you can click through right now — plus the full case study behind each one.</p></div></div>
 
       <div class="cases">
         <article class="case spot reveal">
@@ -662,6 +667,32 @@ body.lock { overflow: hidden; }
               <a class="btn btn-live" href="https://layanharbi9.github.io/SANA/" target="_blank" rel="noopener"><span class="dot" aria-hidden="true"></span><span data-i18n="live">Live demo</span></a>
               <button type="button" class="btn btn-ghost" data-case="sana"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4h7a3 3 0 0 1 3 3v14a2 2 0 0 0-2-2H2zM22 4h-7a3 3 0 0 0-3 3v14a2 2 0 0 1 2-2h8z"/></svg><span data-i18n="cs">Case study</span></button>
               <a class="btn btn-ghost" href="https://github.com/Layanharbi9/SANA" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg><span data-i18n="code">Code</span></a>
+            </div>
+          </div>
+        </article>
+        <article class="case himma spot reveal">
+          <div class="stage">
+            <div class="ghost" aria-hidden="true">هِمَّة</div>
+            <button type="button" class="screens" data-case="himma" aria-label="Open the HIMMA case study">
+              <div class="bwin main"><div class="wbar"><i></i><i></i><i></i><span>HIMMA · in-cluster UI</span></div><img src="assets/shots/himma-dashboard.jpg" alt="HIMMA dashboard: AI assistant, transcription, OCR, and visual Q&amp;A with live service monitoring" width="1440" height="816" loading="lazy" decoding="async"></div>
+              <div class="bwin sub"><div class="wbar"><i></i><i></i><i></i><span>AI Assistant</span></div><img src="assets/shots/himma-assistant.jpg" alt="HIMMA AI assistant answering on a self-hosted Qwen2.5-7B model" width="1440" height="816" loading="lazy" decoding="async"></div>
+              <span class="open-demo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4h7a3 3 0 0 1 3 3v14a2 2 0 0 0-2-2H2zM22 4h-7a3 3 0 0 0-3 3v14a2 2 0 0 1 2-2h8z"/></svg><span data-i18n="cs">Case study</span></span>
+            </button>
+          </div>
+          <div class="cbody">
+            <div class="cmeta"><span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="8" rx="2"/><rect x="2" y="13" width="20" height="8" rx="2"/><path d="M6 7h.01M6 17h.01"/></svg><span data-i18n="hiPill">AI Infrastructure</span></span><span data-i18n="hiMeta">Jul 2026 · Masar (SANI × Misk × SDAIA) · Individual</span></div>
+            <h3>HIMMA <small>هِمَّة</small></h3>
+            <p class="tagline" data-i18n="hiTag">Sovereign AI. No data leaves the company.</p>
+            <p class="cdesc" data-i18n="hiDesc">A self-hosted AI platform for a regulated enterprise of ~2,000 employees: an LLM assistant, meeting transcription, document OCR, and visual Q&amp;A — all open-weight models on Kubernetes with a single NVIDIA T4, plus monitoring, security policies, and a bilingual web app deployed inside the cluster.</p>
+            <div class="metrics">
+              <div class="metric"><b>0.75 s</b><span data-i18n="hiM1">Time to first token</span></div>
+              <div class="metric"><b>~47</b><span data-i18n="hiM2">Tokens / second sustained</span></div>
+              <div class="metric"><b>37 s</b><span data-i18n="hiM3">Self-healing after pod loss</span></div>
+            </div>
+            <div class="tags"><span class="tag">Kubernetes (k3s)</span><span class="tag">vLLM</span><span class="tag">Qwen2.5-7B AWQ</span><span class="tag">faster-whisper</span><span class="tag">Prometheus</span><span class="tag">Next.js</span></div>
+            <div class="acts">
+              <button type="button" class="btn btn-live" data-case="himma"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4h7a3 3 0 0 1 3 3v14a2 2 0 0 0-2-2H2zM22 4h-7a3 3 0 0 0-3 3v14a2 2 0 0 1 2-2h8z"/></svg><span data-i18n="cs">Case study</span></button>
+              <a class="btn btn-ghost" href="https://hub.docker.com/r/layanalharbi4/himma-ui" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v8"/></svg><span data-i18n="docker">Docker image</span></a>
             </div>
           </div>
         </article>
@@ -798,13 +829,16 @@ const T = {
     hEdu:'Education', edT:'BSc Computer Science', edS:'Umm Al-Qura University · Faculty of Computing · Class of 2026 · GPA 3.81 / 4.00',
     hLang:'Languages', lAr:'Arabic', lArL:'Native', lEn:'English', lEnL:'Fluent · B2+ (Oxford Academy)',
     eExp:'Experience', tExp:"Where I've <em>grown.</em>",
-    eWork:'Featured work', tWork:"Things I've <em>built</em> — try them live.", workLede:'Two flagship products with live demos you can click through right now, plus the full case study behind each one.',
+    eWork:'Featured work', tWork:"Things I've <em>built</em> — try them live.", workLede:'Three flagship projects — two with live demos you can click through right now — plus the full case study behind each one.',
     tlPill:'Agentic AI', tlMeta:'2026 · SDA × WeCloudData Bootcamp', tlTag:'Your needs. Your pieces. Your solution.',
     tlDesc:"A multi-agent system that turns each customer's needs, priorities, and budget into a personalized telecom plan — built only from real packages and add-ons, validated by code-based guardrails, and explained before anything changes.",
     tlM1:'Cooperating AI agents', tlM2:'Code-based safety checks', tlM3:'Catalog-grounded answers',
     saPill:'Graduation capstone', saMeta:'2025–2026 · Umm Al-Qura University', saTag:'Every drop, every kilowatt, every action counts.',
     saDesc:'An AI platform that helps Saudi households understand, forecast, and reduce their water and electricity use — with leak alerts, saving goals, rewards, and a bilingual, accessible dashboard.',
     saM1:'R² electricity forecast', saM2:'AI modules in the backend', saM3v:'Top 7', saM3:'Taqathon national finals',
+    hiPill:'AI Infrastructure', hiMeta:'Jul 2026 · Masar (SANI × Misk × SDAIA) · Individual', hiTag:'Sovereign AI. No data leaves the company.',
+    hiDesc:'A self-hosted AI platform for a regulated enterprise of ~2,000 employees: an LLM assistant, meeting transcription, document OCR, and visual Q&amp;A — all open-weight models on Kubernetes with a single NVIDIA T4, plus monitoring, security policies, and a bilingual web app deployed inside the cluster.',
+    hiM1:'Time to first token', hiM2:'Tokens / second sustained', hiM3:'Self-healing after pod loss', docker:'Docker image',
     openDemo:'Open live demo', live:'Live demo', cs:'Case study', code:'Code', demo:'Demo',
     eMore:'More projects', tMore:'AI, systems, data &amp; <em>design.</em>',
     eSkills:'Skills', tSkills:'The <em>toolkit.</em>',
@@ -831,13 +865,16 @@ const T = {
     hEdu:'التعليم', edT:'بكالوريوس علوم الحاسب', edS:'جامعة أم القرى · كلية الحاسبات · دفعة ٢٠٢٦ · معدل ٣٫٨١ من ٤٫٠٠',
     hLang:'اللغات', lAr:'العربية', lArL:'اللغة الأم', lEn:'الإنجليزية', lEnL:'بطلاقة · B2+ (أكاديمية أكسفورد)',
     eExp:'الخبرات', tExp:'محطات <em>نموّي.</em>',
-    eWork:'أعمال مميزة', tWork:'ما <em>بنيته</em> — جرّبه مباشرة.', workLede:'منتجان رئيسيان بعروض حيّة تقدر تتصفحها الآن، مع دراسة الحالة الكاملة لكل منهما.',
+    eWork:'أعمال مميزة', tWork:'ما <em>بنيته</em> — جرّبه مباشرة.', workLede:'ثلاثة مشاريع رئيسية — اثنان منها بعروض حيّة تقدر تتصفحها الآن — مع دراسة الحالة الكاملة لكل مشروع.',
     tlPill:'ذكاء اصطناعي وكيلي', tlMeta:'٢٠٢٦ · معسكر SDA × WeCloudData', tlTag:'احتياجاتك. قطعك. حلّك.',
     tlDesc:'نظام متعدد الوكلاء يحوّل احتياجات العميل وأولوياته وميزانيته إلى باقة اتصالات مخصصة — مبنية فقط من باقات وإضافات حقيقية، يتحقق منها كود أمان، ويشرحها قبل أي تغيير.',
     tlM1:'وكيلان ذكيان متعاونان', tlM2:'فحوصات أمان برمجية', tlM3:'إجابات من الكتالوج فقط',
     saPill:'مشروع التخرج', saMeta:'٢٠٢٥–٢٠٢٦ · جامعة أم القرى', saTag:'كل قطرة، كل كيلوواط، كل خطوة تفرق.',
     saDesc:'منصة ذكاء اصطناعي تساعد الأسر السعودية على فهم استهلاك الماء والكهرباء والتنبؤ به وتقليله — مع تنبيهات التسريب وأهداف التوفير والمكافآت ولوحة ثنائية اللغة سهلة الوصول.',
     saM1:'R² لتنبؤ الكهرباء', saM2:'وحدات ذكاء اصطناعي', saM3v:'أفضل ٧', saM3:'نهائي طاقثون الوطني',
+    hiPill:'بنية تحتية للذكاء الاصطناعي', hiMeta:'يوليو ٢٠٢٦ · مسار (سني × مسك × سدايا) · مشروع فردي', hiTag:'ذكاء اصطناعي سيادي. لا تخرج البيانات من الشركة.',
+    hiDesc:'منصة ذكاء اصطناعي مستضافة ذاتياً لمؤسسة منظَّمة بنحو ٢٠٠٠ موظف: مساعد لغوي، وتفريغ الاجتماعات، والتعرف الضوئي على المستندات، والأسئلة البصرية — كلها نماذج مفتوحة الأوزان على Kubernetes ببطاقة NVIDIA T4 واحدة، مع المراقبة وسياسات الأمان وتطبيق ويب ثنائي اللغة داخل العنقود.',
+    hiM1:'زمن أول رمز', hiM2:'رمز في الثانية بشكل مستمر', hiM3:'تعافٍ ذاتي بعد فقد الحاوية', docker:'صورة Docker',
     openDemo:'افتح العرض الحي', live:'عرض حي', cs:'دراسة الحالة', code:'الكود', demo:'تجربة',
     eMore:'مشاريع أخرى', tMore:'ذكاء اصطناعي، أنظمة، بيانات <em>وتصميم.</em>',
     eSkills:'المهارات', tSkills:'<em>أدواتي.</em>',
@@ -892,9 +929,6 @@ const PROJECTS = [
   { cat:['hack','ai'], icon:'bolt', year:'Sep 2026', kind:{en:'GovTech · Automation',ar:'تقنية حكومية · أتمتة'}, title:{en:'Munjiz — مُنجز',ar:'مُنجز — Munjiz'},
     desc:{en:'An automation layer on top of Absher\'s e-services that maps official failure codes to automatic closing actions — so stalled residency and visa transactions close before the 3-day fine window, issues are caught before submission, and officers get an explainable smart summary, with mandatory human review for sensitive cases. AI Engineer in a 5-member team.',ar:'طبقة أتمتة فوق خدمات أبشر الإلكترونية تربط رموز التعثر الرسمية بإجراءات إغلاق تلقائية — لتُغلق معاملات الإقامة والتأشيرات المتعثرة قبل نافذة الغرامة (٣ أيام)، وتُكتشف المشكلات قبل الإرسال، ويحصل الموظف على ملخص ذكي قابل للتفسير، مع مراجعة بشرية إلزامية للحالات الحساسة. مهندسة الذكاء الاصطناعي في فريق من ٥.'},
     tags:['Intelligent Automation','Load Forecasting','Business Continuity'], award:{en:'2nd Place · Gov E-Services Hackathon',ar:'المركز الثاني · هاكاثون الخدمات الإلكترونية'} },
-  { cat:['ai','systems'], icon:'server', year:'2026', kind:{en:'AI Infrastructure',ar:'بنية تحتية للذكاء الاصطناعي'}, title:{en:'HIMMA — همّة · Sovereign AI Platform',ar:'همّة — HIMMA · منصة ذكاء اصطناعي سيادية'},
-    desc:{en:'Self-hosted AI platform for a regulated enterprise where no data may leave company infrastructure: Qwen2.5-7B AWQ on vLLM, faster-whisper transcription, Tesseract OCR, and Qwen2-VL visual Q&A on a k3s cluster with one T4 — plus monitoring, RBAC, NetworkPolicies, and a bilingual Next.js UI. 0.75 s first token, ~47 tokens/s, self-heals in 37 s.',ar:'منصة ذكاء اصطناعي مستضافة ذاتياً لمؤسسة منظَّمة لا تخرج بياناتها من بنيتها: Qwen2.5-7B AWQ على vLLM، وتفريغ صوتي بـ faster-whisper، وOCR بـ Tesseract، وأسئلة بصرية بـ Qwen2-VL على عنقود k3s ببطاقة T4 واحدة — مع المراقبة وRBAC وسياسات الشبكة وواجهة Next.js ثنائية اللغة. أول رمز في ٠٫٧٥ ث، ونحو ٤٧ رمز/ث، وتعافٍ ذاتي خلال ٣٧ ث.'},
-    tags:['Kubernetes (k3s)','vLLM','Docker','Prometheus'], award:{en:'Masar · SANI × Misk × SDAIA',ar:'مسار · سني × مسك × سدايا'}, demo:'https://hub.docker.com/r/layanalharbi4/himma-ui', demoLabel:{en:'Docker image',ar:'صورة Docker'} },
   { cat:['systems','data'], icon:'wallet', year:'2026', kind:{en:'SaaS Product',ar:'منتج SaaS'}, title:{en:'Raqeeb — رقيب · SaaS Spend Management',ar:'رقيب — Raqeeb · إدارة إنفاق الاشتراكات'},
     desc:{en:'Platform that gives companies one view of their software subscriptions: discovers subscriptions, tracks seat utilization and waste, recommends plan changes and duplicate removals, checks new purchase requests against existing licenses, and runs approval workflows — plus a spend-consultant chat.',ar:'منصة تمنح الشركات رؤية موحدة لاشتراكاتها البرمجية: تكتشف الاشتراكات، وتتابع استخدام المقاعد والهدر، وتوصي بتغيير الخطط وإزالة التكرار، وتراجع طلبات الشراء الجديدة مقابل التراخيص الحالية، وتدير مسارات الاعتماد — مع محادثة مستشار الإنفاق.'},
     tags:['FastAPI','SQLAlchemy','Next.js','TypeScript'], award:{en:'Masar · SANI × Misk × SDAIA',ar:'مسار · سني × مسك × سدايا'} },
@@ -1009,6 +1043,20 @@ const CASES = {
       flow:[['مدخلات منظمة','يختار العميل أهم ٣ احتياجات ومستوى كل منها وميزانيته.'],['وكيل البحث','يسترجع باقات وإضافات حقيقية فقط من كتالوج SQLite موحّد.'],['وكيل تصميم الحلول','يبني حتى ٣ حلول (باقة + ٠–٢ إضافات) ويسعّرها ويقارنها ويوصي بأحدها.'],['ضوابط الأمان','كود يتحقق أن كل عنصر موجود والتركيبة صحيحة والسعر دقيق ولا يتجاوز الميزانية بأكثر من ١٥٪.'],['العميل يقرر','أداة التطبيق تحدّث الباقة فقط بعد اختيار العميل.']],
       feats:['لا باقات أو أسعار أو معرّفات مخترعة — كل إجابة من الكتالوج','عرض مباشر لتقدّم البناء ليشاهد العميل عمل الوكلاء','لوحة إدارة: رحلة كل طلب وصحة الوكلاء واستخدام الكتالوج','تتبع السرعة والتكلفة عبر LangSmith وحزمة تقييم بمعايير LLM-judge'],
       team:'<b>ليان الحربي</b> و<b>Farah Alhajjaji</b> · بإشراف Hao Mai و Mohamed Almoghalis' } },
+  himma: { demo:'https://hub.docker.com/r/layanalharbi4/himma-ui', demoLabel:{en:'Docker image',ar:'صورة Docker'},
+    photo:{ diagram:true, src:'assets/shots/himma-architecture.jpg', en:'HIMMA infrastructure architecture: edge, control plane, CPU workers, and GPU inference', ar:'معمارية همّة: طبقة الوصول، ومستوى التحكم، وعقد المعالجة، وطبقة الاستدلال على GPU' },
+    en:{ tag:'AI Infrastructure · Jul 2026', title:'HIMMA · هِمَّة', sub:'The Sovereign AI Platform — internal AI infrastructure for a regulated enterprise. Individual final project, Masar AI Infrastructure track.',
+      problem:'A regulated enterprise of ~2,000 employees wants AI, but policy is absolute: no company data may leave company infrastructure — no external AI APIs and no cloud inference. Its earlier 1.5B CPU chatbot was too weak for real drafting and reasoning.',
+      solution:'HIMMA delivers a meaningfully more capable, GPU-backed, self-hosted platform on Kubernetes — every model open-weight and served only inside the cluster — justified with capacity math, measured SLAs, and an honest placement plan for a single 16 GB T4.',
+      flow:[['Assistant','Qwen2.5-7B-Instruct AWQ on vLLM owns the T4 — 4-bit weights leave room for the KV cache of five concurrent users.'],['Transcription','faster-whisper (small, INT8) on CPU, so meetings never compete with the assistant for the GPU.'],['Document OCR','Tesseract served over HTTP on CPU workers turns scanned pages into searchable text.'],['Visual Q&A','Qwen2-VL-2B time-shares the GPU with the assistant for questions about charts and diagrams.'],['Operate','Prometheus, Grafana, and Alertmanager; RBAC, default-deny NetworkPolicies, and a bilingual Next.js UI shipped as a Docker image into the cluster.']],
+      feats:['Measured 0.75 s to first token and ~47 tokens/s, holding 42.7 tokens/s with 5 users','A 60-second meeting clip transcribed in 23.6 s; an A4 page digitised in 3.1 s','Self-healing: a deleted LLM pod is back in 37 s','Capacity plan defended in writing: model choice, KV budget, scaling limits, and upgrade path'],
+      team:'<b>Layan Mohammed Alharbi</b> — individual project · Supervised by Osama Alqahtani' },
+    ar:{ tag:'بنية تحتية للذكاء الاصطناعي · يوليو ٢٠٢٦', title:'هِمَّة · HIMMA', sub:'منصة الذكاء الاصطناعي السيادية — بنية تحتية داخلية لمؤسسة منظَّمة. مشروع نهائي فردي في مسار البنية التحتية ضمن برنامج مسار.',
+      problem:'مؤسسة منظَّمة بنحو ٢٠٠٠ موظف تريد الذكاء الاصطناعي، لكن سياستها صارمة: لا تخرج أي بيانات من بنيتها — بلا واجهات ذكاء اصطناعي خارجية ولا استدلال سحابي. ونموذجها السابق (1.5B على المعالج) كان أضعف من مهام الصياغة والتحليل الحقيقية.',
+      solution:'همّة منصة مستضافة ذاتياً أقوى بكثير وتعمل على GPU فوق Kubernetes — كل نماذجها مفتوحة الأوزان وتُخدَم داخل العنقود فقط — مدعومة بحسابات السعة واتفاقيات مستوى خدمة مقاسة وخطة توزيع واقعية لبطاقة T4 بسعة 16GB.',
+      flow:[['المساعد','Qwen2.5-7B-Instruct AWQ على vLLM يملك بطاقة T4 — الأوزان المضغوطة تترك مساحة لذاكرة KV لخمسة مستخدمين متزامنين.'],['التفريغ الصوتي','faster-whisper (small, INT8) على المعالج، حتى لا تنافس الاجتماعات المساعد على GPU.'],['رقمنة المستندات','Tesseract عبر HTTP على عقد المعالجة يحوّل الصفحات الممسوحة إلى نص قابل للبحث.'],['الأسئلة البصرية','Qwen2-VL-2B يتشارك وقت GPU مع المساعد للإجابة عن الرسوم والمخططات.'],['التشغيل','Prometheus وGrafana وAlertmanager؛ وRBAC وسياسات شبكة بالمنع الافتراضي؛ وواجهة Next.js ثنائية اللغة تُنشر كصورة Docker داخل العنقود.']],
+      feats:['أول رمز خلال ٠٫٧٥ ث ونحو ٤٧ رمز/ث، و٤٢٫٧ رمز/ث مع ٥ مستخدمين','تفريغ مقطع اجتماع مدته ٦٠ ث في ٢٣٫٦ ث، ورقمنة صفحة A4 في ٣٫١ ث','تعافٍ ذاتي: حاوية النموذج المحذوفة تعود خلال ٣٧ ث','خطة سعة مدافَع عنها كتابياً: اختيار النموذج، وميزانية KV، وحدود التوسع، ومسار الترقية'],
+      team:'<b>ليان محمد الحربي</b> — مشروع فردي · بإشراف أسامة القحطاني' } },
   sana: { demo:'https://layanharbi9.github.io/SANA/', repo:'https://github.com/Layanharbi9/SANA',
     photo:{ src:'assets/gg.png', en:'Presenting SANA at the graduation exhibition', ar:'عرض مشروع سَنا في معرض التخرج' },
     en:{ tag:'Graduation capstone · 2025–2026', title:'SANA · سَنا', sub:'An intelligent platform for optimizing household water and electricity consumption.',
@@ -1251,7 +1299,7 @@ function renderCase(key) {
     <div class="m-head"><button type="button" class="m-x" data-close aria-label="${T[lang].close}">${I.x}</button>
       <span class="pill">${c.tag}</span><h2 id="mTitle">${c.title}</h2><p>${c.sub}</p></div>
     <div class="m-body">
-      ${C.photo ? `<figure class="m-photo"><img src="${C.photo.src}" alt="${C.photo[lang]}" loading="lazy"><figcaption>${C.photo[lang]}</figcaption></figure>` : ''}
+      ${C.photo ? `<figure class="m-photo${C.photo.diagram ? ' diagram' : ''}"><img src="${C.photo.src}" alt="${C.photo[lang]}" loading="lazy"><figcaption>${C.photo[lang]}</figcaption></figure>` : ''}
       <div class="m-two">
         <div class="m-box m-sec"><h4>${I.alert}${L[0]}</h4><p>${c.problem}</p></div>
         <div class="m-box m-sec"><h4>${I.bulb}${L[1]}</h4><p>${c.solution}</p></div>
@@ -1260,8 +1308,8 @@ function renderCase(key) {
       <div class="m-sec"><h4>${I.spark}${L[3]}</h4><ul class="feats">${c.feats.map(f => `<li>${I.check}<span>${f}</span></li>`).join('')}</ul></div>
       <div class="m-sec"><h4>${I.users}${L[4]}</h4><p class="m-team">${c.team}</p></div>
       <div class="m-foot">
-        <a class="btn btn-live" href="${C.demo}" target="_blank" rel="noopener"><span class="dot" aria-hidden="true"></span>${T[lang].live}</a>
-        <a class="btn btn-ghost" href="${C.repo}" target="_blank" rel="noopener">${I.github}${T[lang].code}${I.arrow}</a>
+        <a class="btn btn-live" href="${C.demo}" target="_blank" rel="noopener">${C.demoLabel ? I.box + t(C.demoLabel) : `<span class="dot" aria-hidden="true"></span>${T[lang].live}`}</a>
+        ${C.repo ? `<a class="btn btn-ghost" href="${C.repo}" target="_blank" rel="noopener">${I.github}${T[lang].code}${I.arrow}</a>` : ''}
       </div>
     </div>`;
 }
