@@ -265,7 +265,7 @@ html[dir="rtl"] .track { animation-direction: reverse; }
 .b-about p { color: var(--ink-2); font-size: 1rem; line-height: 1.85; }
 .b-about p + p { margin-top: 0.9rem; color: var(--muted); }
 .b-about .sig { font-family: var(--serif); font-style: italic; font-size: 1.6rem; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
-.num { font-family: var(--serif); font-size: clamp(2.6rem, 5vw, 3.4rem); font-weight: 500; line-height: 1; letter-spacing: -0.04em; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; min-width: 3.4ch; }
+.num { font-family: var(--serif); font-size: clamp(2.6rem, 5vw, 3.4rem); font-weight: 500; line-height: 1; letter-spacing: -0.04em; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; min-width: 3.4ch; white-space: nowrap; }
 .b-stat b { display: block; font-size: 0.95rem; }
 .b-stat div span { font-size: 0.8rem; color: var(--muted); }
 .b h3 { font-size: 0.72rem; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
@@ -591,7 +591,7 @@ body.lock { overflow: hidden; }
           <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg><span data-i18n="hLang">Languages</span></h3>
           <div class="langs">
             <div class="lang"><b data-i18n="lAr">Arabic</b><small data-i18n="lArL">Native</small><span class="bar"><i style="--w:100%"></i></span></div>
-            <div class="lang"><b data-i18n="lEn">English</b><small data-i18n="lEnL">Fluent · B2+ (Oxford Academy)</small><span class="bar"><i style="--w:86%"></i></span></div>
+            <div class="lang"><b data-i18n="lEn">English</b><small data-i18n="lEnL">Fluent</small><span class="bar"><i style="--w:100%"></i></span></div>
           </div>
         </div>
       </div>
@@ -683,13 +683,13 @@ body.lock { overflow: hidden; }
             <div class="cmeta"><span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="8" rx="2"/><rect x="2" y="13" width="20" height="8" rx="2"/><path d="M6 7h.01M6 17h.01"/></svg><span data-i18n="hiPill">AI Infrastructure</span></span><span data-i18n="hiMeta">Jul 2026 · Masar (SANI × Misk × SDAIA) · Individual</span></div>
             <h3>HIMMA <small>هِمَّة</small></h3>
             <p class="tagline" data-i18n="hiTag">Sovereign AI. No data leaves the company.</p>
-            <p class="cdesc" data-i18n="hiDesc">A self-hosted AI platform for a regulated enterprise of ~2,000 employees: an LLM assistant, meeting transcription, document OCR, and visual Q&amp;A — all open-weight models on Kubernetes with a single NVIDIA T4, plus monitoring, security policies, and a bilingual web app deployed inside the cluster.</p>
+            <p class="cdesc" data-i18n="hiDesc">A self-hosted AI platform for a regulated enterprise of ~2,000 employees: an LLM assistant, meeting transcription, document OCR, and visual Q&amp;A — all open-weight models on Kubernetes with a single NVIDIA T4, plus monitoring, security policies, and a bilingual web interface I designed and built, deployed inside the cluster.</p>
             <div class="metrics">
               <div class="metric"><b>0.75 s</b><span data-i18n="hiM1">Time to first token</span></div>
               <div class="metric"><b>~47</b><span data-i18n="hiM2">Tokens / second sustained</span></div>
               <div class="metric"><b>37 s</b><span data-i18n="hiM3">Self-healing after pod loss</span></div>
             </div>
-            <div class="tags"><span class="tag">Kubernetes (k3s)</span><span class="tag">vLLM</span><span class="tag">Qwen2.5-7B AWQ</span><span class="tag">faster-whisper</span><span class="tag">Prometheus</span><span class="tag">Next.js</span></div>
+            <div class="tags"><span class="tag">Kubernetes (k3s)</span><span class="tag">vLLM</span><span class="tag">Qwen2.5-7B AWQ</span><span class="tag">faster-whisper</span><span class="tag">Prometheus</span><span class="tag">Next.js</span><span class="tag">React</span><span class="tag">TypeScript</span></div>
             <div class="acts">
               <button type="button" class="btn btn-live" data-case="himma"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4h7a3 3 0 0 1 3 3v14a2 2 0 0 0-2-2H2zM22 4h-7a3 3 0 0 0-3 3v14a2 2 0 0 1 2-2h8z"/></svg><span data-i18n="cs">Case study</span></button>
               <a class="btn btn-ghost" href="https://hub.docker.com/r/layanalharbi4/himma-ui" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v8"/></svg><span data-i18n="docker">Docker image</span></a>
@@ -827,7 +827,7 @@ const T = {
     ab2:"I graduated from Umm Al-Qura University with First-Class Honors, completed the selective Masar program (SANI × Misk × SDAIA) and SDA's Agentic AI track, and I keep competing in national hackathons — building products that serve Vision 2030, in Arabic and English.",
     s1:'GPA out of 4.00', s1s:'First-Class Honors · Umm Al-Qura University', s2:'Masar Program', s2s:'1 of 60 to complete from 6,000+ applicants',
     hEdu:'Education', edT:'BSc Computer Science', edS:'Umm Al-Qura University · Faculty of Computing · Class of 2026 · GPA 3.81 / 4.00',
-    hLang:'Languages', lAr:'Arabic', lArL:'Native', lEn:'English', lEnL:'Fluent · B2+ (Oxford Academy)',
+    hLang:'Languages', lAr:'Arabic', lArL:'Native', lEn:'English', lEnL:'Fluent',
     eExp:'Experience', tExp:"Where I've <em>grown.</em>",
     eWork:'Featured work', tWork:"Things I've <em>built</em> — try them live.", workLede:'Three flagship projects — two with live demos you can click through right now — plus the full case study behind each one.',
     tlPill:'Agentic AI', tlMeta:'2026 · SDA × WeCloudData Bootcamp', tlTag:'Your needs. Your pieces. Your solution.',
@@ -837,7 +837,7 @@ const T = {
     saDesc:'An AI platform that helps Saudi households understand, forecast, and reduce their water and electricity use — with leak alerts, saving goals, rewards, and a bilingual, accessible dashboard.',
     saM1:'R² electricity forecast', saM2:'AI modules in the backend', saM3v:'Top 7', saM3:'Taqathon national finals',
     hiPill:'AI Infrastructure', hiMeta:'Jul 2026 · Masar (SANI × Misk × SDAIA) · Individual', hiTag:'Sovereign AI. No data leaves the company.',
-    hiDesc:'A self-hosted AI platform for a regulated enterprise of ~2,000 employees: an LLM assistant, meeting transcription, document OCR, and visual Q&amp;A — all open-weight models on Kubernetes with a single NVIDIA T4, plus monitoring, security policies, and a bilingual web app deployed inside the cluster.',
+    hiDesc:'A self-hosted AI platform for a regulated enterprise of ~2,000 employees: an LLM assistant, meeting transcription, document OCR, and visual Q&amp;A — all open-weight models on Kubernetes with a single NVIDIA T4, plus monitoring, security policies, and a bilingual web interface I designed and built, deployed inside the cluster.',
     hiM1:'Time to first token', hiM2:'Tokens / second sustained', hiM3:'Self-healing after pod loss', docker:'Docker image',
     openDemo:'Open live demo', live:'Live demo', cs:'Case study', code:'Code', demo:'Demo',
     eMore:'More projects', tMore:'AI, systems, data &amp; <em>design.</em>',
@@ -863,7 +863,7 @@ const T = {
     ab2:'تخرجت من جامعة أم القرى بمرتبة الشرف الأولى، وأكملت برنامج مسار الانتقائي (سني × مسك × سدايا) ومسار الذكاء الاصطناعي الوكيلي في الأكاديمية السعودية الرقمية، وما زلت أنافس في الهاكاثونات الوطنية — لأبني منتجات تخدم رؤية ٢٠٣٠ بالعربية والإنجليزية.',
     s1:'المعدل من ٤٫٠٠', s1s:'مرتبة الشرف الأولى · جامعة أم القرى', s2:'برنامج مسار', s2s:'واحدة من ٦٠ أكملوا البرنامج من أصل +٦٠٠٠ متقدم',
     hEdu:'التعليم', edT:'بكالوريوس علوم الحاسب', edS:'جامعة أم القرى · كلية الحاسبات · دفعة ٢٠٢٦ · معدل ٣٫٨١ من ٤٫٠٠',
-    hLang:'اللغات', lAr:'العربية', lArL:'اللغة الأم', lEn:'الإنجليزية', lEnL:'بطلاقة · B2+ (أكاديمية أكسفورد)',
+    hLang:'اللغات', lAr:'العربية', lArL:'اللغة الأم', lEn:'الإنجليزية', lEnL:'بطلاقة',
     eExp:'الخبرات', tExp:'محطات <em>نموّي.</em>',
     eWork:'أعمال مميزة', tWork:'ما <em>بنيته</em> — جرّبه مباشرة.', workLede:'ثلاثة مشاريع رئيسية — اثنان منها بعروض حيّة تقدر تتصفحها الآن — مع دراسة الحالة الكاملة لكل مشروع.',
     tlPill:'ذكاء اصطناعي وكيلي', tlMeta:'٢٠٢٦ · معسكر SDA × WeCloudData', tlTag:'احتياجاتك. قطعك. حلّك.',
@@ -873,7 +873,7 @@ const T = {
     saDesc:'منصة ذكاء اصطناعي تساعد الأسر السعودية على فهم استهلاك الماء والكهرباء والتنبؤ به وتقليله — مع تنبيهات التسريب وأهداف التوفير والمكافآت ولوحة ثنائية اللغة سهلة الوصول.',
     saM1:'R² لتنبؤ الكهرباء', saM2:'وحدات ذكاء اصطناعي', saM3v:'أفضل ٧', saM3:'نهائي طاقثون الوطني',
     hiPill:'بنية تحتية للذكاء الاصطناعي', hiMeta:'يوليو ٢٠٢٦ · مسار (سني × مسك × سدايا) · مشروع فردي', hiTag:'ذكاء اصطناعي سيادي. لا تخرج البيانات من الشركة.',
-    hiDesc:'منصة ذكاء اصطناعي مستضافة ذاتياً لمؤسسة منظَّمة بنحو ٢٠٠٠ موظف: مساعد لغوي، وتفريغ الاجتماعات، والتعرف الضوئي على المستندات، والأسئلة البصرية — كلها نماذج مفتوحة الأوزان على Kubernetes ببطاقة NVIDIA T4 واحدة، مع المراقبة وسياسات الأمان وتطبيق ويب ثنائي اللغة داخل العنقود.',
+    hiDesc:'منصة ذكاء اصطناعي مستضافة ذاتياً لمؤسسة منظَّمة بنحو ٢٠٠٠ موظف: مساعد لغوي، وتفريغ الاجتماعات، والتعرف الضوئي على المستندات، والأسئلة البصرية — كلها نماذج مفتوحة الأوزان على Kubernetes ببطاقة NVIDIA T4 واحدة، مع المراقبة وسياسات الأمان وواجهة ويب ثنائية اللغة صمّمتها وبنيتها بنفسي داخل العنقود.',
     hiM1:'زمن أول رمز', hiM2:'رمز في الثانية بشكل مستمر', hiM3:'تعافٍ ذاتي بعد فقد الحاوية', docker:'صورة Docker',
     openDemo:'افتح العرض الحي', live:'عرض حي', cs:'دراسة الحالة', code:'الكود', demo:'تجربة',
     eMore:'مشاريع أخرى', tMore:'ذكاء اصطناعي، أنظمة، بيانات <em>وتصميم.</em>',
@@ -903,8 +903,8 @@ const EXPERIENCE = [
   { hl:true, tag:{en:'Top 1%', ar:'أفضل ١٪'}, when:{en:'Jun 2026 – Aug 2026', ar:'يونيو – أغسطس ٢٠٢٦'},
     role:{en:'AI Infrastructure Trainee — Masar Program', ar:'متدربة البنية التحتية للذكاء الاصطناعي — برنامج مسار'},
     org:{en:'SANI × Misk Foundation × SDAIA', ar:'سني × مؤسسة مسك × سدايا'},
-    pts:{en:['Completed a <b>100+ hour, two-phase</b> AI infrastructure and product development program — selected among <b>140 finalists from 6,000+ applicants</b> (top 1%) and <b>one of 60</b> to complete the full program.','<b>Phase 1 · AI Infrastructure — HIMMA:</b> designed and deployed a sovereign, self-hosted AI platform on a live <b>k3s Kubernetes</b> cluster with one NVIDIA T4 — an LLM assistant (Qwen2.5-7B AWQ on vLLM), meeting transcription, OCR, and visual Q&amp;A, with Prometheus/Grafana monitoring, RBAC, and NetworkPolicies — and defended it in a formal technical report.','<b>Phase 2 · Product Development — Raqeeb:</b> co-developed a SaaS spend-management platform that discovers company subscriptions, flags unused seats and duplicates, reviews new purchases against existing licenses, and runs approval workflows — after researching gaps in the Saudi SaaS subscription market.'],
-         ar:['أكملت برنامجاً من <b>مرحلتين يتجاوز ١٠٠ ساعة</b> في البنية التحتية للذكاء الاصطناعي وتطوير المنتجات — اختِرت ضمن <b>١٤٠ متأهلاً من +٦٠٠٠ متقدم</b> (أفضل ١٪) و<b>واحدة من ٦٠</b> أكملوا البرنامج كاملاً.','<b>المرحلة الأولى · البنية التحتية — همّة:</b> صممت ونشرت منصة ذكاء اصطناعي سيادية مستضافة ذاتياً على عنقود <b>k3s Kubernetes</b> حي ببطاقة NVIDIA T4 — مساعد لغوي (Qwen2.5-7B AWQ على vLLM)، وتفريغ الاجتماعات، والتعرف الضوئي على النصوص، والأسئلة البصرية، مع مراقبة Prometheus/Grafana وصلاحيات RBAC وسياسات الشبكة — ودافعت عنها في تقرير تقني رسمي.','<b>المرحلة الثانية · تطوير المنتج — رقيب:</b> شاركت في تطوير منصة لإدارة إنفاق اشتراكات SaaS تكتشف اشتراكات الشركة، وترصد المقاعد غير المستخدمة والتكرار، وتراجع طلبات الشراء الجديدة مقابل التراخيص الحالية، وتدير مسارات الاعتماد — بعد دراسة فجوات سوق اشتراكات SaaS في السعودية.']} },
+    pts:{en:['Completed a <b>100+ hour, two-phase</b> AI infrastructure and product development program — selected among <b>140 finalists from 6,000+ applicants</b> (top 1%) and <b>one of 60</b> to complete the full program.','<b>Phase 1 · AI Infrastructure — HIMMA:</b> designed and deployed a sovereign, self-hosted AI platform on a live <b>k3s Kubernetes</b> cluster with one NVIDIA T4 — an LLM assistant (Qwen2.5-7B AWQ on vLLM), meeting transcription, OCR, and visual Q&amp;A, with Prometheus/Grafana monitoring, RBAC, and NetworkPolicies — and designed and built its bilingual <b>Next.js / React / TypeScript</b> interface; defended it all in a formal technical report.','<b>Phase 2 · Product Development — Raqeeb:</b> co-developed a SaaS spend-management platform that discovers company subscriptions, flags unused seats and duplicates, reviews new purchases against existing licenses, and runs approval workflows — after researching gaps in the Saudi SaaS subscription market.'],
+         ar:['أكملت برنامجاً من <b>مرحلتين يتجاوز ١٠٠ ساعة</b> في البنية التحتية للذكاء الاصطناعي وتطوير المنتجات — اختِرت ضمن <b>١٤٠ متأهلاً من +٦٠٠٠ متقدم</b> (أفضل ١٪) و<b>واحدة من ٦٠</b> أكملوا البرنامج كاملاً.','<b>المرحلة الأولى · البنية التحتية — همّة:</b> صممت ونشرت منصة ذكاء اصطناعي سيادية مستضافة ذاتياً على عنقود <b>k3s Kubernetes</b> حي ببطاقة NVIDIA T4 — مساعد لغوي (Qwen2.5-7B AWQ على vLLM)، وتفريغ الاجتماعات، والتعرف الضوئي على النصوص، والأسئلة البصرية، مع مراقبة Prometheus/Grafana وصلاحيات RBAC وسياسات الشبكة — وصمّمت وبنيت واجهاتها ثنائية اللغة بـ <b>Next.js / React / TypeScript</b>، ودافعت عنها في تقرير تقني رسمي.','<b>المرحلة الثانية · تطوير المنتج — رقيب:</b> شاركت في تطوير منصة لإدارة إنفاق اشتراكات SaaS تكتشف اشتراكات الشركة، وترصد المقاعد غير المستخدمة والتكرار، وتراجع طلبات الشراء الجديدة مقابل التراخيص الحالية، وتدير مسارات الاعتماد — بعد دراسة فجوات سوق اشتراكات SaaS في السعودية.']} },
   { when:{en:'May 2026 – Present', ar:'مايو ٢٠٢٦ – الآن'}, role:{en:'Frontend Developer (Volunteer)', ar:'مطورة واجهات (تطوع)'},
     org:{en:'Numu Association', ar:'جمعية نمو'},
     pts:{en:['Developed responsive, accessible interface components across devices for the association\'s digital platform.'], ar:['طوّرت مكونات واجهة متجاوبة وسهلة الوصول على مختلف الأجهزة لمنصة الجمعية الرقمية.']} },
@@ -983,12 +983,14 @@ const PROJECTS = [
 ];
 
 const SKILLS = [
-  { wide:true, icon:'bot', color:'linear-gradient(135deg,#9333ea,#db2777)', name:{en:'Agentic AI & LLMs',ar:'الذكاء الوكيلي ونماذج اللغة'}, sub:{en:'Core focus',ar:'التركيز الأساسي'},
+  { icon:'bot', color:'linear-gradient(135deg,#9333ea,#db2777)', name:{en:'Agentic AI & LLMs',ar:'الذكاء الوكيلي ونماذج اللغة'}, sub:{en:'Core focus',ar:'التركيز الأساسي'},
     hot:['Multi-Agent Systems','Tool Calling','LLM Orchestration','LangGraph'], items:['Prompt Engineering','Generative AI','Agent Validation','Grounded Retrieval','Guardrails','LangSmith','OpenAI API','Evaluation'] },
   { icon:'cpu', color:'linear-gradient(135deg,#0284c7,#38bdf8)', name:{en:'Machine Learning',ar:'التعلم الآلي'}, sub:{en:'Models & methods',ar:'نماذج وأساليب'},
     hot:['XGBoost','LightGBM','LSTM'], items:['TensorFlow','Keras','scikit-learn','Deep Learning','Computer Vision','Transfer Learning','Time-Series Forecasting','Model Evaluation'] },
   { icon:'code', color:'linear-gradient(135deg,#db2777,#f472b6)', name:{en:'Programming',ar:'البرمجة'}, sub:{en:'Languages',ar:'لغات'},
-    hot:['Python'], items:['SQL','JavaScript','Java','C','C++','HTML / CSS'] },
+    hot:['Python','TypeScript'], items:['JavaScript','SQL','Java','C','C++'] },
+  { icon:'layers', color:'linear-gradient(135deg,#7c3aed,#38bdf8)', name:{en:'Web Development',ar:'تطوير الويب'}, sub:{en:'Front-end & full-stack',ar:'واجهات وتطوير متكامل'},
+    hot:['React','Next.js','TypeScript'], items:['Tailwind CSS','HTML / CSS','JavaScript','REST APIs','Responsive & Accessible UI','Appwrite','Firebase'] },
   { icon:'db', color:'linear-gradient(135deg,#0d9488,#2dd4bf)', name:{en:'Data & APIs',ar:'البيانات والواجهات'}, sub:{en:'Backend & analysis',ar:'خلفية وتحليل'},
     hot:['FastAPI','Flask'], items:['REST APIs','Firebase','SQLite','MySQL','pandas','NumPy','matplotlib','seaborn'] },
   { icon:'wrench', color:'linear-gradient(135deg,#d97706,#fbbf24)', name:{en:'Tools, Infra & Design',ar:'الأدوات والبنية والتصميم'}, sub:{en:'Ship it',ar:'من الفكرة للإطلاق'},
@@ -1048,13 +1050,13 @@ const CASES = {
     en:{ tag:'AI Infrastructure · Jul 2026', title:'HIMMA · هِمَّة', sub:'The Sovereign AI Platform — internal AI infrastructure for a regulated enterprise. Individual final project, Masar AI Infrastructure track.',
       problem:'A regulated enterprise of ~2,000 employees wants AI, but policy is absolute: no company data may leave company infrastructure — no external AI APIs and no cloud inference. Its earlier 1.5B CPU chatbot was too weak for real drafting and reasoning.',
       solution:'HIMMA delivers a meaningfully more capable, GPU-backed, self-hosted platform on Kubernetes — every model open-weight and served only inside the cluster — justified with capacity math, measured SLAs, and an honest placement plan for a single 16 GB T4.',
-      flow:[['Assistant','Qwen2.5-7B-Instruct AWQ on vLLM owns the T4 — 4-bit weights leave room for the KV cache of five concurrent users.'],['Transcription','faster-whisper (small, INT8) on CPU, so meetings never compete with the assistant for the GPU.'],['Document OCR','Tesseract served over HTTP on CPU workers turns scanned pages into searchable text.'],['Visual Q&A','Qwen2-VL-2B time-shares the GPU with the assistant for questions about charts and diagrams.'],['Operate','Prometheus, Grafana, and Alertmanager; RBAC, default-deny NetworkPolicies, and a bilingual Next.js UI shipped as a Docker image into the cluster.']],
+      flow:[['Assistant','Qwen2.5-7B-Instruct AWQ on vLLM owns the T4 — 4-bit weights leave room for the KV cache of five concurrent users.'],['Transcription','faster-whisper (small, INT8) on CPU, so meetings never compete with the assistant for the GPU.'],['Document OCR','Tesseract served over HTTP on CPU workers turns scanned pages into searchable text.'],['Visual Q&A','Qwen2-VL-2B time-shares the GPU with the assistant for questions about charts and diagrams.'],['Interface','I designed and built the bilingual (Arabic/English) HIMMA web app in Next.js, React, TypeScript, and Tailwind — dashboard, assistant, transcription, OCR, visual Q&A, and live service monitoring, with light and dark themes.'],['Operate','Prometheus, Grafana, and Alertmanager; RBAC and default-deny NetworkPolicies; the UI shipped as a Docker image into the cluster.']],
       feats:['Measured 0.75 s to first token and ~47 tokens/s, holding 42.7 tokens/s with 5 users','A 60-second meeting clip transcribed in 23.6 s; an A4 page digitised in 3.1 s','Self-healing: a deleted LLM pod is back in 37 s','Capacity plan defended in writing: model choice, KV budget, scaling limits, and upgrade path'],
       team:'<b>Layan Mohammed Alharbi</b> — individual project · Supervised by Osama Alqahtani' },
     ar:{ tag:'بنية تحتية للذكاء الاصطناعي · يوليو ٢٠٢٦', title:'هِمَّة · HIMMA', sub:'منصة الذكاء الاصطناعي السيادية — بنية تحتية داخلية لمؤسسة منظَّمة. مشروع نهائي فردي في مسار البنية التحتية ضمن برنامج مسار.',
       problem:'مؤسسة منظَّمة بنحو ٢٠٠٠ موظف تريد الذكاء الاصطناعي، لكن سياستها صارمة: لا تخرج أي بيانات من بنيتها — بلا واجهات ذكاء اصطناعي خارجية ولا استدلال سحابي. ونموذجها السابق (1.5B على المعالج) كان أضعف من مهام الصياغة والتحليل الحقيقية.',
       solution:'همّة منصة مستضافة ذاتياً أقوى بكثير وتعمل على GPU فوق Kubernetes — كل نماذجها مفتوحة الأوزان وتُخدَم داخل العنقود فقط — مدعومة بحسابات السعة واتفاقيات مستوى خدمة مقاسة وخطة توزيع واقعية لبطاقة T4 بسعة 16GB.',
-      flow:[['المساعد','Qwen2.5-7B-Instruct AWQ على vLLM يملك بطاقة T4 — الأوزان المضغوطة تترك مساحة لذاكرة KV لخمسة مستخدمين متزامنين.'],['التفريغ الصوتي','faster-whisper (small, INT8) على المعالج، حتى لا تنافس الاجتماعات المساعد على GPU.'],['رقمنة المستندات','Tesseract عبر HTTP على عقد المعالجة يحوّل الصفحات الممسوحة إلى نص قابل للبحث.'],['الأسئلة البصرية','Qwen2-VL-2B يتشارك وقت GPU مع المساعد للإجابة عن الرسوم والمخططات.'],['التشغيل','Prometheus وGrafana وAlertmanager؛ وRBAC وسياسات شبكة بالمنع الافتراضي؛ وواجهة Next.js ثنائية اللغة تُنشر كصورة Docker داخل العنقود.']],
+      flow:[['المساعد','Qwen2.5-7B-Instruct AWQ على vLLM يملك بطاقة T4 — الأوزان المضغوطة تترك مساحة لذاكرة KV لخمسة مستخدمين متزامنين.'],['التفريغ الصوتي','faster-whisper (small, INT8) على المعالج، حتى لا تنافس الاجتماعات المساعد على GPU.'],['رقمنة المستندات','Tesseract عبر HTTP على عقد المعالجة يحوّل الصفحات الممسوحة إلى نص قابل للبحث.'],['الأسئلة البصرية','Qwen2-VL-2B يتشارك وقت GPU مع المساعد للإجابة عن الرسوم والمخططات.'],['الواجهات','صمّمت وبنيت تطبيق همّة ثنائي اللغة (عربي/إنجليزي) بـ Next.js وReact وTypeScript وTailwind — لوحة التحكم والمساعد والتفريغ والتعرف الضوئي والأسئلة البصرية ومراقبة الخدمات المباشرة، بوضعين فاتح وداكن.'],['التشغيل','Prometheus وGrafana وAlertmanager؛ وRBAC وسياسات شبكة بالمنع الافتراضي؛ والواجهة تُنشر كصورة Docker داخل العنقود.']],
       feats:['أول رمز خلال ٠٫٧٥ ث ونحو ٤٧ رمز/ث، و٤٢٫٧ رمز/ث مع ٥ مستخدمين','تفريغ مقطع اجتماع مدته ٦٠ ث في ٢٣٫٦ ث، ورقمنة صفحة A4 في ٣٫١ ث','تعافٍ ذاتي: حاوية النموذج المحذوفة تعود خلال ٣٧ ث','خطة سعة مدافَع عنها كتابياً: اختيار النموذج، وميزانية KV، وحدود التوسع، ومسار الترقية'],
       team:'<b>ليان محمد الحربي</b> — مشروع فردي · بإشراف أسامة القحطاني' } },
   sana: { demo:'https://layanharbi9.github.io/SANA/', repo:'https://github.com/Layanharbi9/SANA',
